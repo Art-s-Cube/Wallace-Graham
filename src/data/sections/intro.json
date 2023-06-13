@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Our Clients Are Our Priority",
+        "content": "Our firm motto says it all.  We listen.  We care.  We help.  We aim to improve the lives and well-being of each and every client that walks through our door.",
+        "image": "/img/slid/team.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Mona Lisa Wallace",
+        "content": "Mona Lisa founded our firm in 1981, and has been working tirelessly ever since in her fight for fairness and justice.  She has received numerous awards and acknowledgements for her successful representation of thousands of injured and harmed employees and consumers nationwide.",
+        "image": "/img/slid/mona.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Bill Graham",
+        "content": "Bill uses his compassion and decades of legal experience to help individuals ",
+        "image": "/img/slid/bill.jpg"
+    },
+    {
+        "id": 4,
+        "title": "We Love What We Do",
+        "content": "We find joy in investigating legal harms and to potentially helping another deserving client. ",
+        "image": "/img/slid/whit.jpg"
+    }
+]

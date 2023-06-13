@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "icon": "https://wallacegraham.com/graphics/new_design/images/AttorneyPic_new.jpg",
+        "title": "Experienced",
+        "content": "Our firm continues to operate and thrive under the leadership and four decades of experience of founding partner, Mona Lisa Wallace. Together, Mona Lisa and her partner of over 25 years, Bill Graham, have built a firm of seasoned and dedicated attorneys and legal professionals who share their high standard of excellence and perseverance on behalf of their clients. We know what it takes because we have been there before."
+    },
+    {
+        "id": 2,
+        "icon": "https://wallacegraham.com/clientuploads/_photos/_7/_48.jpg",
+        "title": "FOCUSED ON YOU",
+        "content": "“Our Clients Are Our Priority” has been our mission since Day One. Our firm culture is focused on listening to our clients, caring about our clients, and developing legal strategies to advance their legal rights. We aim to lessen the burdens and improve the outlook for our clients as much as possible after a devastating life setback."
+    },
+    {
+        "id": 3,
+        "icon": "https://wallacegraham.com/clientuploads/_photos/_7/_50.jpg",
+        "title": "REPUTATION",
+        "content": "We are known as one of the hardest-working law firms for harmed and injured persons and their families. We are driven to overcome obstacles blocking our clients' access to justice. We pride ourselves on thinking outside the box. And we are not afraid to go up against some of the largest corporate actors in the world."
+    }
+]
