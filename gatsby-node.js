@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Query for practice areas
   const practiceAreasResult = await graphql(`
     query PracticeAreasQuery {
-      allContentfulPracticeArea(sort: { fields: title, order: ASC }) {
+      allContentfulPracticeArea(sort: {title: ASC}) {
         nodes {
           title
           text {
@@ -40,6 +40,7 @@ exports.createPages = async ({ graphql, actions }) => {
         imageTitle: practiceArea.image.title,
         slug: slug,
         practiceAreas: practiceAreasResult.data.allContentfulPracticeArea.nodes,
+        siteUrl: slug,
       },
     });
   });
@@ -82,6 +83,7 @@ exports.createPages = async ({ graphql, actions }) => {
         imageUrl: blog.image && blog.image.file ? blog.image.file.url : null,
         publishDate: blog.publishDate,
         slug: slug,
+        siteUrl: slug,
       },
     });
   });
@@ -89,7 +91,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Query for news
   const newsResult = await graphql(`
     query NewsQuery {
-      allContentfulNews(sort: { order: DESC, fields: date }) {
+      allContentfulNews(sort: {date: DESC}) {
         nodes {
           author
           body {
@@ -116,7 +118,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const newsItems = newsResult.data.allContentfulNews.nodes;
 
   newsItems.forEach((newsItem) => {
-    const cleanedHeadline = newsItem.headline.replace(/\?/g, "");
+    const cleanedHeadline = newsItem.headline.replace(/\?&/g, "");
     const slug = cleanedHeadline.replace(/\s+/g, "-").toLowerCase();
     createPage({
       path: `/news/${slug}`,
@@ -130,6 +132,7 @@ exports.createPages = async ({ graphql, actions }) => {
         headline: newsItem.headline,
         slug: slug,
         source: newsItem.source,
+        siteUrl: slug,
       },
     });
   });

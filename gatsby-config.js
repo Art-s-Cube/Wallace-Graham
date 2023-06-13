@@ -11,6 +11,7 @@ module.exports = {
       "spaceId": "qek284u2824f"
     }
   },
+  'gatsby-transformer-json',
   {
     resolve: `gatsby-source-filesystem`,
     options: {
@@ -18,9 +19,8 @@ module.exports = {
       path: `${__dirname}/src/data/`, // Adjust this path to where your JSON file is located
     },
   },
-    'gatsby-transformer-json',
+    
     'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-eslint'
   ],
