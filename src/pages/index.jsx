@@ -29,14 +29,14 @@ const Homepage1 = () => {
     var navbar = navbarRef.current,
       logo = logoRef.current;
 
-    if (window.pageYOffset > 300) {
+    if (window.scrollY > 300) {
       navbar.classList.add("nav-scroll");
     } else {
       navbar.classList.remove("nav-scroll");
     }
 
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 300) {
         navbar.classList.add("nav-scroll");
         logo.setAttribute("src", appData.darkLogo);
       } else {
@@ -44,19 +44,22 @@ const Homepage1 = () => {
         logo.setAttribute("src", appData.lightLogo);
       }
     });
+
   }, [fixedSlider, MainContent, navbarRef]);
 
   return (
     <LightTheme>
-      <Navbar nr={navbarRef} lr={logoRef} />
-      <IntroWithSlider sliderRef={fixedSlider} />
-      <div ref={MainContent} className="main-content">
-        <AboutUs />
-        <PracticeArea />
-        <VideoWithTestimonials />
-        <CallToAction />
-        <Footer />
-      </div>
+      <>
+        <Navbar nr={navbarRef} lr={logoRef} />
+        <IntroWithSlider sliderRef={fixedSlider} />
+        <div ref={MainContent} className="main-content">
+          <AboutUs />
+          <PracticeArea />
+          <VideoWithTestimonials />
+          <CallToAction />
+          <Footer />
+        </div>
+      </>
     </LightTheme>
   );
 };
