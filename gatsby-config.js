@@ -20,7 +20,8 @@ module.exports = {
       path: `${__dirname}/src/data/`, // Adjust this path to where your JSON file is located
     },
   },
-    
+  
+    'gatsby-plugin-preload-fonts',
     'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
