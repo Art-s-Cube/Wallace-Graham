@@ -12,8 +12,8 @@ const HeadComponents = [
   <meta key="description" name="description" content="Wallace and Graham a law firm in the small town of Salisbury, North Carolina." />,
   <meta key="author" name="author" content="Arts Cube" />,
   // Google Fonts
-  <link key="Poppins" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" />,
-  <link key="Montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap" />,
+  <link key="Poppins" media="print" onload="this.onload=null;this.removeAttribute('media');" rel="preconnect" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" crossorigin/>,
+  <link key="Montserrat" media="print" onload="this.onload=null;this.removeAttribute('media');" rel="preconnect" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap" crossorigin/>,
   // Styles
   <link key="ionicons" rel="stylesheet" href="/css/ionicons.min.css" />,
   <link key="styles-light" rel="stylesheet" href="/css/light.css" />,

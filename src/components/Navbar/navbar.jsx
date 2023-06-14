@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import { handleDropdown, handleMobileDropdown } from "common/navbar";
+import LogoImage from "./logo.inline.svg";
 const Logo = "/img/Wallace-Graham-logo-blackBG.svg";
 
 const Navbar = ({ lr, nr, theme }) => {
@@ -22,6 +23,7 @@ const Navbar = ({ lr, nr, theme }) => {
     >
       <div className="container">
         <Link to="/" className="logo">
+          <LogoImage />
           {theme ? (
             theme === "themeL" ? (
               <img src={Logo} alt="Wallace & Graham" width={355} height={80}/>
