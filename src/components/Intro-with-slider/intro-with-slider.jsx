@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import removeSlashFromPagination from "common/removeSlashpagination";
 import fadeWhenScroll from "common/fadeWhenScroll";
 
-SwiperCore.use([Navigation, Pagination, Parallax]);
+SwiperCore.use([Navigation, Pagination]);
 
 const IntroWithSlider = ({ sliderRef }) => {
   React.useEffect(() => {
@@ -24,7 +24,6 @@ const IntroWithSlider = ({ sliderRef }) => {
     <header ref={sliderRef} className="slider slider-prlx fixed-slider text-center">
       <div className="swiper-container parallax-slider">
         <Swiper
-          parallax={true}
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,

@@ -1,7 +1,5 @@
 import React from "react";
 import { Script } from "gatsby";
-
-
 import "styles/main.css";
 
 const LightTheme = ({ children, mobileappstyle, useSkin }) => {
@@ -37,7 +35,6 @@ const LightTheme = ({ children, mobileappstyle, useSkin }) => {
   return (
     <>
       { children }
-
       <Script src="/js/wowInit.js"></Script>
     </>
   );

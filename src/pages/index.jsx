@@ -24,7 +24,7 @@ const Homepage1 = () => {
         MainContent.current.style.marginTop = slidHeight + "px";
       }
       
-    }, 1000);
+    }, 10);
     
     var navbar = navbarRef.current,
       logo = logoRef.current;
