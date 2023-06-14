@@ -20,7 +20,7 @@ const IntroWithSlider = ({ sliderRef }) => {
     setTimeout(() => {
       removeSlashFromPagination();
       setLoad(false);
-    }, 1000);
+    }, 100);
   }, []);
 
   const navigationPrevRef = React.useRef(null);
