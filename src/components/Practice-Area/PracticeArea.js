@@ -41,7 +41,7 @@ const PracticeArea = () => {
                 <div className="col-md-4 col-6 mb-20">
                     <div key={node.title}>
                         {node.image && (
-                            <img src={node.image.url} alt={node.image.title} />
+                            <img src={node.image.url} alt={node.image.title} width="236" height="83"/>
                         )}
                      </div>
                         <a

@@ -1,13 +1,15 @@
 import React from "react";
+import LightTheme from "layouts/Light";
 import Navbar from "components/Navbar/navbar";
 import IntroWithSlider from "components/Intro-with-slider/intro-with-slider";
 import AboutUs from "components/About-us/about-us";
+import PracticeArea from "components/Practice-Area/PracticeArea";
 import VideoWithTestimonials from "components/Video-with-testimonials/video-with-testimonials";
 import appData from 'data/app.json'
 import CallToAction from "components/Call-to-action/call-to-action";
 import Footer from "components/Footer/footer";
-import LightTheme from "layouts/Light";
-import PracticeArea from "components/Practice-Area/PracticeArea";
+
+
 
 const Homepage1 = () => {
   const fixedSlider = React.useRef(null);
