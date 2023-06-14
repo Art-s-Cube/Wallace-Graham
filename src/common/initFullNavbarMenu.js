@@ -1,7 +1,6 @@
 import appData from "../data/app.json";
 import getSiblings from "./getSiblings";
 import animateElement from "./animateElement";
-import delay from "./delay";
 
 const initFullNavbarMenu = () => {
   function noScroll() {
@@ -26,7 +25,6 @@ const initFullNavbarMenu = () => {
         }
         window.addEventListener("scroll", noScroll);
       } else {
-        delay(300, animateElement(document.querySelector(".hamenu"), "-100%"));
         document.querySelector(".topnav .menu-icon .text").classList.remove("open");
         if (navDark) {
           navDark.classList.remove("navlit");
@@ -39,7 +37,7 @@ const initFullNavbarMenu = () => {
     });
     document.querySelectorAll(".main-menu a").forEach((item) => {
       item.addEventListener("click", () => {
-        delay(300, animateElement(document.querySelector(".hamenu"), "-100%"));
+        delay(100, animateElement(document.querySelector(".hamenu"), "-100%"));
         document.querySelector(".topnav .menu-icon .text").classList.remove("open");
         if (navDark) {
           navDark.classList.remove("navlit");
