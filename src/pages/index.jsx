@@ -26,15 +26,22 @@ const Homepage1 = ({ data }) => {
       }
     }, 10);
 
-    var navbar = navbarRef.current,
-      logo = logoRef.current;
+    var navbar = navbarRef.current;
 
-    if (window.scrollY > 300) {
+    if (window.pageYOffset > 300) {
       navbar.classList.add("nav-scroll");
     } else {
       navbar.classList.remove("nav-scroll");
-    };
-  }, [fixedSlider, MainContent, navbarRef]);
+    }
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        navbar.classList.add("nav-scroll");
+      } else {
+        navbar.classList.remove("nav-scroll");
+      }
+    });
+  }, [navbarRef]);
 
   const teamImageData = getImage(data.teamImage);
   const monaImageData = getImage(data.monaImage);
