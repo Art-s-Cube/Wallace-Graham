@@ -40,7 +40,6 @@ exports.createPages = async ({ graphql, actions }) => {
         imageTitle: practiceArea.image.title,
         slug: slug,
         practiceAreas: practiceAreasResult.data.allContentfulPracticeArea.nodes,
-        siteUrl: slug,
       },
     });
   });
@@ -83,7 +82,6 @@ exports.createPages = async ({ graphql, actions }) => {
         imageUrl: blog.image && blog.image.file ? blog.image.file.url : null,
         publishDate: blog.publishDate,
         slug: slug,
-        siteUrl: slug,
       },
     });
   });
@@ -132,7 +130,6 @@ exports.createPages = async ({ graphql, actions }) => {
         headline: newsItem.headline,
         slug: slug,
         source: newsItem.source,
-        siteUrl: slug,
       },
     });
   });

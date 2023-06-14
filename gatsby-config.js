@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Wallace & Graham',
     description: 'North Carolina Attorneys',
-    author: 'Arts Cube'
+    author: 'Arts Cube',
+    siteUrl: "https://wallace-graham.onrender.com/"
   },
   plugins: [{
     resolve: 'gatsby-source-contentful',
@@ -21,6 +22,7 @@ module.exports = {
   },
     
     'gatsby-plugin-image',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-eslint'
   ],
