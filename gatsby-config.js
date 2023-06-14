@@ -22,7 +22,6 @@ module.exports = {
   },
     
     'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-eslint'
