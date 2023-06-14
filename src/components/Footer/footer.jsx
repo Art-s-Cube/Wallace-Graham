@@ -1,6 +1,5 @@
 import React from "react";
-import appData from "data/app.json";
-
+const Logo = "/img/Wallace-Graham-logo-blackBG.svg";
 const Footer = ({ hideBGCOLOR }) => {
   return (
     <footer className={`${!hideBGCOLOR ? "sub-bg" : ""}`}>
@@ -42,7 +41,7 @@ const Footer = ({ hideBGCOLOR }) => {
           <div className="col-lg-4">
             <div className="item">
               <div className="logo">
-                <img src={appData.lightLogo} alt="Walllace & Graham" />
+              <img src={Logo} alt="Wallace & Graham" width={250} height={40} />
               </div>
               <div className="copy-right">
                 <p>
