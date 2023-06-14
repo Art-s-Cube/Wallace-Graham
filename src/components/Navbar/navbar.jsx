@@ -23,15 +23,14 @@ const Navbar = ({ lr, nr, theme }) => {
     >
       <div className="container">
         <Link to="/" className="logo">
-          <LogoImage />
           {theme ? (
             theme === "themeL" ? (
-              <img src={Logo} alt="Wallace & Graham" width={355} height={80}/>
+              <LogoImage />
             ) : (
-              <img src={Logo} alt="Wallace & Graham" width={355} height={80} />
+              <LogoImage />
             )
           ) : (
-            <img src={Logo} alt="Wallace & Graham" width={355} height={80} />
+            <LogoImage />
           )}
         </Link>
 
