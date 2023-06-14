@@ -7,6 +7,7 @@ import "styles/main.css";
 const LightTheme = ({ children, mobileappstyle, useSkin }) => {
   React.useEffect(() => {
     window.theme = "light";
+    let darkStyles = document.querySelector('link[href="/css/dark.css"]');
     let lightStyles = document.querySelector('link[href="/css/light.css"]');
     if (darkStyles) {
       if (!lightStyles) {
