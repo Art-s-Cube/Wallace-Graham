@@ -2,7 +2,6 @@ import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import appData from "data/app.json";
 import { handleDropdown, handleMobileDropdown } from "common/navbar";
-import { StaticImage } from "gatsby-plugin-image"
 
 
 const Navbar = ({ lr, nr, theme }) => {
