@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import AboutUs1Date from "../../data/sections/about-us1.json";
 
 const AboutUs = () => {
+
   return (
     <section className="about-us section-padding">
       <div className="container">
@@ -22,7 +23,7 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="col-lg-7 img">
-            <img src={AboutUs1Date.image} alt="" />
+            <img src="img/feat.jpg" alt="About Us" width="500" height="580" />
             <div className="stauts">
               {AboutUs1Date.stauts.map((item) => (
                 <div className="item" key={item.id}>

@@ -30,6 +30,14 @@ module.exports = {
         pathname.match(/^\/elevated/) ? `use-credentials` : `anonymous`,
     },
   },
+  {
+    resolve: 'gatsby-plugin-react-svg',
+    options: {
+      rule: {
+        include: /img/,
+      },
+    },
+  },
     'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
