@@ -2,6 +2,8 @@ import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import appData from "data/app.json";
 import { handleDropdown, handleMobileDropdown } from "common/navbar";
+import { StaticImage } from "gatsby-plugin-image"
+
 
 const Navbar = ({ lr, nr, theme }) => {
   const data = useStaticQuery(graphql`
@@ -24,12 +26,12 @@ const Navbar = ({ lr, nr, theme }) => {
         <Link to="/" className="logo">
           {theme ? (
             theme === "themeL" ? (
-              <img ref={lr} src={appData.darkLogo} alt="logo" />
+              <img ref={lr} src={appData.darkLogo} alt="Wallace & Graham" />
             ) : (
-              <img ref={lr} src={appData.lightLogo} alt="logo" />
+              <img ref={lr} src={appData.lightLogo} alt="Wallace & Graham" />
             )
           ) : (
-            <img ref={lr} src={appData.lightLogo} alt="logo" />
+            <img ref={lr} src={appData.lightLogo} alt="Wallace & Graham" />
           )}
         </Link>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 const PracticeArea = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
@@ -41,7 +41,7 @@ const PracticeArea = () => {
                 <div className="col-md-4 col-6 mb-20">
                     <div key={node.title}>
                         {node.image && (
-                            <StaticImage src={node.image.url} alt={node.image.title} width={236} height={83} />
+                            <img src={node.image.url} alt={node.image.title} width={236} height={83} />
                         )}
                      </div>
                         <a
