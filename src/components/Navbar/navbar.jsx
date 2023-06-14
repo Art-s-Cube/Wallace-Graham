@@ -1,8 +1,7 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
-import appData from "data/app.json";
 import { handleDropdown, handleMobileDropdown } from "common/navbar";
-
+const Logo = "/img/Wallace-Graham-logo-blackBG.svg";
 
 const Navbar = ({ lr, nr, theme }) => {
   const data = useStaticQuery(graphql`
@@ -25,12 +24,12 @@ const Navbar = ({ lr, nr, theme }) => {
         <Link to="/" className="logo">
           {theme ? (
             theme === "themeL" ? (
-              <img ref={lr} src={appData.darkLogo} alt="Wallace & Graham" />
+              <img src={Logo} alt="Wallace & Graham" width={355} height={80}/>
             ) : (
-              <img ref={lr} src={appData.lightLogo} alt="Wallace & Graham" />
+              <img src={Logo} alt="Wallace & Graham" width={355} height={80} />
             )
           ) : (
-            <img ref={lr} src={appData.lightLogo} alt="Wallace & Graham" />
+            <img src={Logo} alt="Wallace & Graham" width={355} height={80} />
           )}
         </Link>
 
