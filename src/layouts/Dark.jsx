@@ -1,7 +1,6 @@
 import React from "react";
 import { Script } from "gatsby";
 
-import LoadingScreen from "components/Loading-Screen";
 
 import "styles/main.css";
 import "styles/preloader.css";  
@@ -37,7 +36,6 @@ const DarkTheme = ({ children, useSkin, mobileappstyle }) => {
 
   return (
     <>
-      <LoadingScreen />
       { children }
 
       <Script src="/js/wowInit.js"></Script>
