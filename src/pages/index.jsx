@@ -1,17 +1,17 @@
 import React from "react";
+import { graphql } from "gatsby";
 import LightTheme from "layouts/Light";
 import Navbar from "components/Navbar/navbar";
 import IntroWithSlider from "components/Intro-with-slider/intro-with-slider";
 import AboutUs from "components/About-us/about-us";
 import PracticeArea from "components/Practice-Area/PracticeArea";
 import VideoWithTestimonials from "components/Video-with-testimonials/video-with-testimonials";
-import appData from 'data/app.json'
+import appData from "data/app.json";
 import CallToAction from "components/Call-to-action/call-to-action";
 import Footer from "components/Footer/footer";
+import { getImage } from "gatsby-plugin-image";
 
-
-
-const Homepage1 = () => {
+const Homepage1 = ({ data }) => {
   const fixedSlider = React.useRef(null);
   const MainContent = React.useRef(null);
   const navbarRef = React.useRef(null);
@@ -25,9 +25,8 @@ const Homepage1 = () => {
       if (MainContent.current) {
         MainContent.current.style.marginTop = slidHeight + "px";
       }
-      
     }, 10);
-    
+
     var navbar = navbarRef.current,
       logo = logoRef.current;
 
@@ -46,14 +45,24 @@ const Homepage1 = () => {
         logo.setAttribute("src", appData.lightLogo);
       }
     });
-
   }, [fixedSlider, MainContent, navbarRef]);
+
+  const teamImageData = getImage(data.teamImage);
+  const monaImageData = getImage(data.monaImage);
+  const billImageData = getImage(data.billImage);
+  const whitImageData = getImage(data.whitImage);
 
   return (
     <LightTheme>
       <>
         <Navbar nr={navbarRef} lr={logoRef} />
-        <IntroWithSlider sliderRef={fixedSlider} />
+        <IntroWithSlider
+          sliderRef={fixedSlider}
+          teamImage={teamImageData}
+          monaImage={monaImageData}
+          billImage={billImageData}
+          whitImage={whitImageData}
+        />
         <div ref={MainContent} className="main-content">
           <AboutUs />
           <PracticeArea />
@@ -71,7 +80,32 @@ export const Head = () => {
     <>
       <title>Wallace & Graham</title>
     </>
-  )
-}
+  );
+};
+
+export const query = graphql`
+  query {
+    teamImage: file(relativePath: { eq: "img/slid/team.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+    monaImage: file(relativePath: { eq: "img/slid/mona.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+    billImage: file(relativePath: { eq: "img/slid/bill.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+    whitImage: file(relativePath: { eq: "img/slid/whit.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+  }
+`;
 
 export default Homepage1;
