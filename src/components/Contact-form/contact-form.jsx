@@ -47,7 +47,7 @@ const ContactForm = () => {
                 }}
               >
                 {({ errors, touched }) => (
-                  <Form id="contact-form">
+                  <Form id="contact-form" name="contact" data-netlify="true" method="POST">
                     <div className="messages" ref={messageRef}></div>
                     <div className="controls">
                       <div className="form-group">
