@@ -7,7 +7,7 @@ const HtmlAttributes = {
 const HeadComponents = [
   // Meta Tags
   <meta key="httpEquiv" httpEquiv="X-UA-Compatible" content="IE=edge" />,
-  <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />,
+  <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />,
   <meta key="keywords" name="keywords" content="personal injury lawyers north carolina, personal injury lawyer salisbury, personal injury attorneys salisbury, personal injury lawyer kannapolis, personal injury lawyer concord, mesothelioma lawyers, Cancer lawyers, workers compensation north carolina, social security disability attorney salisbury nc, social security disability lawyer salisbury nc" />,
   <meta key="description" name="description" content="Wallace and Graham a law firm in the small town of Salisbury, North Carolina." />,
   <meta key="author" name="author" content="Arts Cube" />,
