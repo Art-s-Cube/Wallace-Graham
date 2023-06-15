@@ -2,7 +2,7 @@ import React from 'react'
 import Split from '../Split'
 import { Link } from 'gatsby'
 
-const CallToAction = ({img}) => {
+const CallToAction = () => {
     return (
       <section
         className="call-action section-padding sub-bg bg-img"
@@ -26,8 +26,7 @@ const CallToAction = ({img}) => {
             <div className="col-md-4 col-lg-3 valign">
               <Link
                 to={`/contact/contact-dark`}
-                className="butn bord curve wow fadeInUp"
-                data-wow-delay=".5s"
+                className="butn bord curve"
               >
                 <span>Get In Touch</span>
               </Link>

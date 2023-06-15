@@ -26,10 +26,10 @@ const PracticeArea = () => {
         <div className="row">
           <div className="col-lg-4 valign md-mb50">
             <div className="sec-head mb-0">
-              <h6 className="wow fadeIn" data-wow-delay=".5s">
+              <h6>
                 PRACTICE AREAS
               </h6>
-              <h3 className="wow mb-20">How We Can Help You</h3>
+              <h3 className="mb-20">How We Can Help You</h3>
               <p className="fw-400">
                 Our firm practices a wide array of injury, disease, death, consumer, and environmental tort claims. We investigate the wrongful conduct of companies and the insurance industry. We aim to help our clients in any way possible. Please call to see if we can help.
               </p>
@@ -47,7 +47,7 @@ const PracticeArea = () => {
                     </div>
                     <a
                       href="#0"
-                      className="link words chars splitting fz-12"
+                      className="link fz-12"
                       data-splitting
                     >
                       {node.title}

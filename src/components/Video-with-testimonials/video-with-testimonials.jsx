@@ -60,17 +60,16 @@ const VideoWithTestimonials = () => {
             <div className="col-lg-5 offset-lg-1">
               <div className="testim-box">
                 <div className="head-box">
-                  <h6 className="wow fadeIn" data-wow-delay=".5s">
+                  <h6>
                     Our Clients
                   </h6>
-                  <h4 className="wow fadeInLeft" data-wow-delay=".5s">
+                  <h4>
                     What Client&apos;s Say?
                   </h4>
                 </div>
                 <Slider
                   {...settings}
-                  className="slic-item wow fadeInUp"
-                  data-wow-delay=".5s"
+                  className="slic-item"
                 >
                   <div className="item">
                     <p>
