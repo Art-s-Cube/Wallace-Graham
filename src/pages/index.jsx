@@ -43,21 +43,12 @@ const Homepage1 = ({ data }) => {
     });
   }, [navbarRef]);
 
-  const teamImageData = getImage(data.teamImage);
-  const monaImageData = getImage(data.monaImage);
-  const billImageData = getImage(data.billImage);
-  const whitImageData = getImage(data.whitImage);
-
   return (
     <LightTheme>
       <>
         <Navbar nr={navbarRef} lr={logoRef} />
         <IntroWithSlider
           sliderRef={fixedSlider}
-          teamImage={teamImageData}
-          monaImage={monaImageData}
-          billImage={billImageData}
-          whitImage={whitImageData}
         />
         <div ref={MainContent} className="main-content">
           <AboutUs />
@@ -78,30 +69,5 @@ export const Head = () => {
     </>
   );
 };
-
-export const query = graphql`
-  query {
-    teamImage: file(relativePath: { eq: "img/slid/team.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-    monaImage: file(relativePath: { eq: "img/slid/mona.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-    billImage: file(relativePath: { eq: "img/slid/bill.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-    whitImage: file(relativePath: { eq: "img/slid/whit.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-  }
-`;
 
 export default Homepage1;
