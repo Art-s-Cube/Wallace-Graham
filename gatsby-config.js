@@ -20,7 +20,13 @@ module.exports = {
       path: `${__dirname}/src/data/`, // Adjust this path to where your JSON file is located
     },
   },
-  
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `img`,
+      path: `${__dirname}/src/data/img/`,
+    },
+  },
   {
     resolve: `gatsby-plugin-preload-fonts`,
     options: {
@@ -38,9 +44,10 @@ module.exports = {
       },
     },
   },
+    'gatsby-background-image',
     'gatsby-plugin-image',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-eslint'
