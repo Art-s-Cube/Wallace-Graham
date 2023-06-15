@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/css";
@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import removeSlashFromPagination from "common/removeSlashpagination";
 import fadeWhenScroll from "common/fadeWhenScroll";
-import BackgroundImage from "gatsby-background-image";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -17,40 +16,6 @@ const IntroWithSlider = ({ sliderRef }) => {
     removeSlashFromPagination();
   }, []);
 
-  // Get the image files using GraphQL
-  const data = useStaticQuery(graphql`
-    query {
-      teamImage: file(relativePath: { eq: "img/team.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      monaImage: file(relativePath: { eq: "img/mona.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      billImage: file(relativePath: { eq: "img/bill.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      whitImage: file(relativePath: { eq: "img/whit.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   const paginationRef = React.useRef(null);
@@ -59,6 +24,12 @@ const IntroWithSlider = ({ sliderRef }) => {
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
+
+  // Replace these URLs with your Cloudinary image URLs
+  const teamImageUrl = "https://res.cloudinary.com/wallacegraham/image/upload/v1686857295/team_1_sj6t0g.jpg";
+  const monaImageUrl = "https://res.cloudinary.com/wallacegraham/image/upload/v1686858327/mona_xbbcvn.jpg";
+  const billImageUrl = "https://res.cloudinary.com/wallacegraham/image/upload/v1686858441/bill1_yi8a9i.jpg";
+  const whitImageUrl = "https://res.cloudinary.com/wallacegraham/image/upload/v1686858328/whit_vrwkbc.jpg";
 
   return (
     <header ref={sliderRef} className="slider slider-prlx fixed-slider text-center">
@@ -78,12 +49,13 @@ const IntroWithSlider = ({ sliderRef }) => {
         >
           {/* Swiper slides */}
           <SwiperSlide key="1" className="swiper-slide">
-            <BackgroundImage
-              Tag="div"
+            <div
               className="bg-img valign slideImg"
-              fluid={data.teamImage?.childImageSharp?.fluid}
+              style={{
+                backgroundImage: `url(${teamImageUrl})`,
+                ...bgImageStyles,
+              }}
               data-overlay-dark="6"
-              style={bgImageStyles}
             >
               <div className="container">
                 <div className="row justify-content-center">
@@ -100,15 +72,16 @@ const IntroWithSlider = ({ sliderRef }) => {
                   </div>
                 </div>
               </div>
-            </BackgroundImage>
+            </div>
           </SwiperSlide>
           <SwiperSlide key="2" className="swiper-slide">
-            <BackgroundImage
-              Tag="div"
+            <div
               className="bg-img valign"
-              fluid={data.monaImage?.childImageSharp?.fluid}
+              style={{
+                backgroundImage: `url(${monaImageUrl})`,
+                ...bgImageStyles,
+              }}
               data-overlay-dark="6"
-              style={bgImageStyles}
             >
               <div className="container">
                 <div className="row justify-content-center">
@@ -125,15 +98,16 @@ const IntroWithSlider = ({ sliderRef }) => {
                   </div>
                 </div>
               </div>
-            </BackgroundImage>
+            </div>
           </SwiperSlide>
           <SwiperSlide key="3" className="swiper-slide">
-            <BackgroundImage
-              Tag="div"
+            <div
               className="bg-img valign"
-              fluid={data.billImage?.childImageSharp?.fluid}
+              style={{
+                backgroundImage: `url(${billImageUrl})`,
+                ...bgImageStyles,
+              }}
               data-overlay-dark="6"
-              style={bgImageStyles}
             >
               <div className="container">
                 <div className="row justify-content-center">
@@ -150,15 +124,16 @@ const IntroWithSlider = ({ sliderRef }) => {
                   </div>
                 </div>
               </div>
-            </BackgroundImage>
+            </div>
           </SwiperSlide>
           <SwiperSlide key="4" className="swiper-slide">
-            <BackgroundImage
-              Tag="div"
+            <div
               className="bg-img valign"
-              fluid={data.whitImage?.childImageSharp?.fluid}
+              style={{
+                backgroundImage: `url(${whitImageUrl})`,
+                ...bgImageStyles,
+              }}
               data-overlay-dark="6"
-              style={bgImageStyles}
             >
               <div className="container">
                 <div className="row justify-content-center">
@@ -175,7 +150,7 @@ const IntroWithSlider = ({ sliderRef }) => {
                   </div>
                 </div>
               </div>
-            </BackgroundImage>
+            </div>
           </SwiperSlide>
         </Swiper>
         <div className="setone setwo">

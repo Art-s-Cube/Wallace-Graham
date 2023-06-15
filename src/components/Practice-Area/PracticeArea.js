@@ -26,10 +26,10 @@ const PracticeArea = () => {
         <div className="row">
           <div className="col-lg-4 valign md-mb50">
             <div className="sec-head mb-0">
-              <h6>
+              <h4 className="fw-300 text-u ls10 mb-10 fz-18">
                 PRACTICE AREAS
-              </h6>
-              <h3 className="mb-20">How We Can Help You</h3>
+              </h4>
+              <h5 className="fw-600 text-u ls1 mb-30 fz-40">How We Can Help You</h5>
               <p className="fw-400">
                 Our firm practices a wide array of injury, disease, death, consumer, and environmental tort claims. We investigate the wrongful conduct of companies and the insurance industry. We aim to help our clients in any way possible. Please call to see if we can help.
               </p>

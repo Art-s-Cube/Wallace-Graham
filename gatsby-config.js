@@ -37,6 +37,20 @@ module.exports = {
     },
   },
   {
+    resolve: `gatsby-source-cloudinary`,
+    options: {
+      cloudName: `wallacegraham`,
+      apiKey: `285297732771442`,
+      apiSecret: `TtLWXD8OYIhR3S_yq0jAM-2up88`,
+      // resourceType: `image`,
+      // type: `twitter`,
+      // maxResults: 22,
+      // tags: true,
+      // context: true,
+      // prefix: `demo/animals`
+    },
+  },
+  {
     resolve: 'gatsby-plugin-react-svg',
     options: {
       rule: {

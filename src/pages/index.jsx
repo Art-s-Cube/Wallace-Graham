@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby";
 import IntroWithSlider from "components/Intro-with-slider/intro-with-slider";
 import LightTheme from "layouts/Light";
 import Navbar from "components/Navbar/navbar";
@@ -8,7 +7,6 @@ import PracticeArea from "components/Practice-Area/PracticeArea";
 import VideoWithTestimonials from "components/Video-with-testimonials/video-with-testimonials";
 import CallToAction from "components/Call-to-action/call-to-action";
 import Footer from "components/Footer/footer";
-import { getImage } from "gatsby-plugin-image";
 
 const Homepage1 = ({ data }) => {
   const fixedSlider = React.useRef(null);

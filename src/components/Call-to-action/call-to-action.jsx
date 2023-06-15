@@ -13,8 +13,8 @@ const CallToAction = () => {
             <div className="col-md-8 col-lg-9">
               <div className="content sm-mb30">
                 <Split>
-                  <h6 className="wow words chars splitting" data-splitting>
-                    Request a
+                  <h6 className="fw-300 text-u ls10 mb-10 fz-25">
+                    Request   a
                   </h6>
                   <h2 className="wow words chars splitting" data-splitting>
                     Free <br/><b className="back-color">Consultation</b>

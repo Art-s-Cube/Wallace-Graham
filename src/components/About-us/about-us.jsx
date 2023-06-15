@@ -10,10 +10,10 @@ const AboutUs = () => {
         <div className="row">
           <div className="col-lg-5 valign md-mb50">
             <div className="mb-50">
-              <h6 className="fw-300 text-u ls10 mb-10">
+              <h2 className="fw-300 text-u ls10 mb-10 fz-18">
                 {AboutUs1Date.smallTitle}
-              </h6>
-              <h3 className="fw-600 text-u ls1 mb-30">
+              </h2>
+              <h3 className="fw-600 text-u ls1 mb-30 fz-40">
                 {AboutUs1Date.title}
               </h3>
               <p className="fw-400">{AboutUs1Date.content}</p>
