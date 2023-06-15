@@ -6,7 +6,7 @@ const CallToAction = ({img}) => {
     return (
       <section
         className="call-action section-padding sub-bg bg-img"
-        style={{ backgroundImage: `url(${img ? img : "/img/patrn.svg"})` }}
+        style={{ backgroundImage: `url(/img/patrn.svg")` }}
       >
         <div className="container">
           <div className="row">
