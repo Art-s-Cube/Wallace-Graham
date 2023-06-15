@@ -6,12 +6,12 @@ import LogoImage from "./logo.inline.svg";
 const Navbar = ({ lr, nr, theme }) => {
   const data = useStaticQuery(graphql`
   query NavbarQuery {
-    allContentfulPracticeArea(sort: { fields: title, order: ASC }) {
-      nodes {
-        title
-      }
+  allContentfulPracticeArea(sort: {title: ASC}) {
+    nodes {
+      title
     }
   }
+}
 `);
   return (
     <nav

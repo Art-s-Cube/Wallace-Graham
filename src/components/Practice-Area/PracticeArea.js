@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const PracticeArea = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      allContentfulPracticeArea(sort: { fields: title, order: ASC }) {
+      allContentfulPracticeArea(sort: {title: ASC}) {
         nodes {
           title
           text {

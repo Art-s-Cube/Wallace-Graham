@@ -93,8 +93,8 @@ const IntroWithSlider = ({ sliderRef }) => {
                       <p>
                         Our firm motto says it all.  We listen.  We care.  We help.  We aim to improve the lives and well-being of each and every client that walks through our door.
                       </p>
-                      <Link to="/about/about-dark" className="butn bord curve mt-30">
-                        <span>Look More</span>
+                      <Link to="/testimonials/" className="butn bord curve mt-30">
+                        <span>Read our Testimonials</span>
                       </Link>
                     </div>
                   </div>
@@ -118,8 +118,8 @@ const IntroWithSlider = ({ sliderRef }) => {
                       <p>
                         Mona Lisa founded our firm in 1981, and has been working tirelessly ever since in her fight for fairness and justice.  She has received numerous awards and acknowledgements for her successful representation of thousands of injured and harmed employees and consumers nationwide.
                       </p>
-                      <Link to="/about/about-dark" className="butn bord curve mt-30">
-                        <span>Look More</span>
+                      <Link to="/attorneys/" className="butn bord curve mt-30">
+                        <span>Meet our Attorneys</span>
                       </Link>
                     </div>
                   </div>
@@ -143,8 +143,8 @@ const IntroWithSlider = ({ sliderRef }) => {
                       <p>
                         Bill uses his compassion and decades of legal experience to help individuals
                       </p>
-                      <Link to="/about/about-dark" className="butn bord curve mt-30">
-                        <span>Look More</span>
+                      <Link to="/team/" className="butn bord curve mt-30">
+                        <span>Meet our Team</span>
                       </Link>
                     </div>
                   </div>
@@ -168,8 +168,8 @@ const IntroWithSlider = ({ sliderRef }) => {
                       <p>
                         We find joy in investigating legal harms and to potentially helping another deserving client.
                       </p>
-                      <Link to="/about/about-dark" className="butn bord curve mt-30">
-                        <span>Look More</span>
+                      <Link to="/about-us/" className="butn bord curve mt-30">
+                        <span>Learn more about us.</span>
                       </Link>
                     </div>
                   </div>

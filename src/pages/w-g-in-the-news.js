@@ -61,7 +61,7 @@ export const Head = () => {
 export default BlogGridLight;
 export const query = graphql`
   query {
-  allContentfulNews(sort: {order: DESC, fields: date}) {
+    allContentfulNews(sort: {date: DESC}) {
     nodes {
       author
       body {
