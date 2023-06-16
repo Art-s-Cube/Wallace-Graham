@@ -1,15 +1,19 @@
 import React from "react";
 import "swiper/css";
 import "swiper/css/navigation";
-import intro5Data from "data/sections/intro5.json";
+import { graphql, useStaticQuery } from "gatsby";
 import removeSlashFromPagination from "common/removeSlashpagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
-
+import BackgroundImage from "gatsby-background-image";
 
 
 SwiperCore.use([Navigation, Pagination, Parallax]);
-
+const bgImageStyles = {
+  height: "100vh",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+};
 const Intro5 = () => {
   const [load, setLoad] = React.useState(true);
   React.useEffect(() => {
@@ -18,7 +22,38 @@ const Intro5 = () => {
       setLoad(false);
     });
   }, []);
-
+  const data = useStaticQuery(graphql`
+    query {
+      teamImage: file(relativePath: { eq: "img/team.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      monaImage: file(relativePath: { eq: "img/mona.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      billImage: file(relativePath: { eq: "img/bill.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      whitImage: file(relativePath: { eq: "img/whit.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   const paginationRef = React.useRef(null);
@@ -65,34 +100,94 @@ const Intro5 = () => {
             className="swiper-wrapper"
             slidesPerView={1}
           >
-            {intro5Data.map((slide, index) => (
-              <SwiperSlide key={slide.id} className="swiper-slide">
-                <div
-                  className="bg-img valign"
-                  style={{ backgroundImage: `url(${slide.image})` }}
-                  data-overlay-dark="6"
-                >
+              <SwiperSlide key="1" className="swiper-slide">
+                <BackgroundImage
+                    Tag="div"
+                    className="bg-img valign slideImg"
+                    fluid={data.teamImage?.childImageSharp?.fluid}
+                    data-overlay-dark="6"
+                    style={bgImageStyles}
+                  >
                   <div className="container">
                     <div className="row">
-                      <div className="col-lg-6">
+                      <div className="col-lg-8 slideTextBG">
                         <div className="caption mt-30">
-                          <h1>
-                            {typeof slide.title === "object" ? (
-                              <>
-                                {slide.title.first} <br /> {slide.title.second}
-                              </>
-                            ) : (
-                              slide.title
-                            )}
-                          </h1>
-                          {slide?.content && <p>{slide.content}</p>}
+                        <h1 className="">Our Clients Are Our Priority</h1>
+                        <p>
+                          Our firm motto says it all.  We listen.  We care.  We help.  We aim to improve the lives and well-being of each and every client that walks through our door.
+                        </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </BackgroundImage>
               </SwiperSlide>
-            ))}
+              <SwiperSlide key="2" className="swiper-slide">
+                <BackgroundImage
+                    Tag="div"
+                    className="bg-img valign"
+                    fluid={data.monaImage?.childImageSharp?.fluid}
+                    data-overlay-dark="6"
+                    style={bgImageStyles}
+                  >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-8 slideTextBG">
+                        <div className="caption mt-30">
+                        <h1 className="">Mona Lisa Wallace</h1>
+                        <p>
+                          Mona Lisa founded our firm in 1981, and has been working tirelessly ever since in her fight for fairness and justice.  She has received numerous awards and acknowledgements for her successful representation of thousands of injured and harmed employees and consumers nationwide.
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </BackgroundImage>
+              </SwiperSlide>
+              <SwiperSlide key="3" className="swiper-slide">
+                <BackgroundImage
+                  Tag="div"
+                  className="bg-img valign"
+                  fluid={data.billImage?.childImageSharp?.fluid}
+                  data-overlay-dark="6"
+                  style={bgImageStyles}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-8 slideTextBG">
+                        <div className="caption mt-30">
+                        <h1 className="">Bill Graham</h1>
+                        <p>
+                          Bill uses his compassion and decades of legal experience to help individuals
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </BackgroundImage>
+              </SwiperSlide>
+              <SwiperSlide key="3" className="swiper-slide">
+                <BackgroundImage
+                  Tag="div"
+                  className="bg-img valign"
+                  fluid={data.whitImage?.childImageSharp?.fluid}
+                  data-overlay-dark="6"
+                  style={bgImageStyles}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-8 slideTextBG">
+                        <div className="caption mt-30">
+                        <h1 className="">We Love What We Do</h1>
+                        <p>
+                          We find joy in investigating legal harms and to potentially helping another deserving client.
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </BackgroundImage>
+              </SwiperSlide>
           </Swiper>
         ) : null}
         <div className="setting">

@@ -1,6 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
-import IntroWithSlider from "components/Intro-with-slider/intro-with-slider";
+import Intro5 from "components/Intro5/intro5";
 import LightTheme from "layouts/Light";
 import Navbar from "components/Navbar/navbar";
 import AboutUs from "components/About-us/about-us";
@@ -46,9 +45,7 @@ const Homepage1 = ({ data }) => {
     <LightTheme>
       <>
         <Navbar nr={navbarRef} lr={logoRef} />
-        <IntroWithSlider
-          sliderRef={fixedSlider}
-        />
+        <Intro5 />
         <div ref={MainContent} className="main-content">
           <AboutUs />
           <PracticeArea />
