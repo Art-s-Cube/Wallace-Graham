@@ -24,13 +24,13 @@ const Intro5 = () => {
   }, []);
   const data = useStaticQuery(graphql`
     query {
-      teamImage: cloudinaryMedia(public_id: { eq: "team_1_sj6t0g" }) {
+      teamImage: cloudinaryMedia(public_id: { eq: "team2" }) {
         secure_url
       }
       monaImage: cloudinaryMedia(public_id: { eq: "mona2" }) {
         secure_url
       }
-      billImage: cloudinaryMedia(public_id: { eq: "bill2" }) {
+      billImage: cloudinaryMedia(public_id: { eq: "bill3" }) {
         secure_url
       }
       whitImage: cloudinaryMedia(public_id: { eq: "whit2" }) {
