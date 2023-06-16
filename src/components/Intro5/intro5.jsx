@@ -24,28 +24,28 @@ const Intro5 = () => {
   }, []);
   const data = useStaticQuery(graphql`
     query {
-      teamImage: file(relativePath: { eq: "img/team1.webp" }) {
+      teamImage: file(relativePath: { eq: "img/team.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      monaImage: file(relativePath: { eq: "img/mona2.webp" }) {
+      monaImage: file(relativePath: { eq: "img/mona.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      billImage: file(relativePath: { eq: "img/bill3.webp" }) {
+      billImage: file(relativePath: { eq: "img/bill.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      whitImage: file(relativePath: { eq: "img/whit2.webp" }) {
+      whitImage: file(relativePath: { eq: "img/whit.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
