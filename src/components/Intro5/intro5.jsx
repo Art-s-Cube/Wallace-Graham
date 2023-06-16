@@ -27,13 +27,13 @@ const Intro5 = () => {
       teamImage: cloudinaryMedia(public_id: { eq: "team_1_sj6t0g" }) {
         secure_url
       }
-      monaImage: cloudinaryMedia(public_id: { eq: "mona_xbbcvn" }) {
+      monaImage: cloudinaryMedia(public_id: { eq: "mona2" }) {
         secure_url
       }
       billImage: cloudinaryMedia(public_id: { eq: "bill2" }) {
         secure_url
       }
-      whitImage: cloudinaryMedia(public_id: { eq: "whit_vrwkbc" }) {
+      whitImage: cloudinaryMedia(public_id: { eq: "whit2" }) {
         secure_url
       }
     }
