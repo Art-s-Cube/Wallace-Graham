@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from 'gatsby';
+import "swiper/css";
+import "swiper/css/navigation";
 import intro5Data from "data/sections/intro5.json";
 import removeSlashFromPagination from "common/removeSlashpagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
 
-import "swiper/css";
-import "swiper/css/navigation";
+
 
 SwiperCore.use([Navigation, Pagination, Parallax]);
 
@@ -80,6 +81,7 @@ const Intro5 = () => {
                     <div className="row">
                       <div className="col-lg-6">
                         <div className="caption mt-30">
+                          <h5>0{index + 1} .</h5>
                           <h1>
                             {typeof slide.title === "object" ? (
                               <>
