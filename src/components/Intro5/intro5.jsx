@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import removeSlashFromPagination from "common/removeSlashpagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
+import BackgroundImage from "gatsby-background-image";
 
 
 SwiperCore.use([Navigation, Pagination, Parallax]);
@@ -23,17 +24,33 @@ const Intro5 = () => {
   }, []);
   const data = useStaticQuery(graphql`
     query {
-      teamImage: cloudinaryMedia(public_id: { eq: "team2" }) {
-        secure_url
+      teamImage: file(relativePath: { eq: "img/team.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
-      monaImage: cloudinaryMedia(public_id: { eq: "mona2" }) {
-        secure_url
+      monaImage: file(relativePath: { eq: "img/mona.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
-      billImage: cloudinaryMedia(public_id: { eq: "bill3" }) {
-        secure_url
+      billImage: file(relativePath: { eq: "img/bill.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
-      whitImage: cloudinaryMedia(public_id: { eq: "whit2" }) {
-        secure_url
+      whitImage: file(relativePath: { eq: "img/whit.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   `);
@@ -74,20 +91,26 @@ const Intro5 = () => {
                 swiper.navigation.destroy();
                 swiper.navigation.init();
                 swiper.navigation.update();
+
+                swiper.pagination.destroy();
+                swiper.pagination.init();
+                swiper.pagination.update();
               });
             }}
             className="swiper-wrapper"
             slidesPerView={1}
           >
               <SwiperSlide key="1" className="swiper-slide">
-                <div
-                  className="bg-img valign slideImg teamImg"
-                  style={{ ...bgImageStyles, backgroundImage: `url(${data.teamImage.secure_url})` }}
-                  data-overlay-dark="6"
-                >
+                <BackgroundImage
+                    Tag="div"
+                    className="bg-img valign slideImg"
+                    fluid={data.teamImage?.childImageSharp?.fluid}
+                    data-overlay-dark="6"
+                    style={bgImageStyles}
+                  >
                   <div className="container">
                     <div className="row">
-                      <div className="col-lg-8 slideTextBG">
+                      <div className="col-lg-6 slideTextBG">
                         <div className="caption mt-30">
                         <h1 className="">Our Clients Are Our Priority</h1>
                         <p>
@@ -97,14 +120,16 @@ const Intro5 = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </BackgroundImage>
               </SwiperSlide>
               <SwiperSlide key="2" className="swiper-slide">
-                <div
-                  className="bg-img valign"
-                  style={{ ...bgImageStyles, backgroundImage: `url(${data.monaImage.secure_url})` }}
-                  data-overlay-dark="6"
-                >
+                <BackgroundImage
+                    Tag="div"
+                    className="bg-img valign"
+                    fluid={data.monaImage?.childImageSharp?.fluid}
+                    data-overlay-dark="6"
+                    style={bgImageStyles}
+                  >
                   <div className="container">
                     <div className="row">
                       <div className="col-lg-8 slideTextBG">
@@ -117,14 +142,16 @@ const Intro5 = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </BackgroundImage>
               </SwiperSlide>
               <SwiperSlide key="3" className="swiper-slide">
-              <div
-                className="bg-img valign"
-                style={{ ...bgImageStyles, backgroundImage: `url(${data.billImage.secure_url})` }}
-                data-overlay-dark="6"
-              >
+                <BackgroundImage
+                  Tag="div"
+                  className="bg-img valign"
+                  fluid={data.billImage?.childImageSharp?.fluid}
+                  data-overlay-dark="6"
+                  style={bgImageStyles}
+                >
                   <div className="container">
                     <div className="row">
                       <div className="col-lg-8 slideTextBG">
@@ -137,14 +164,16 @@ const Intro5 = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </BackgroundImage>
               </SwiperSlide>
               <SwiperSlide key="3" className="swiper-slide">
-              <div
-                className="bg-img valign"
-                style={{ ...bgImageStyles, backgroundImage: `url(${data.whitImage.secure_url})` }}
-                data-overlay-dark="6"
-              >
+                <BackgroundImage
+                  Tag="div"
+                  className="bg-img valign"
+                  fluid={data.whitImage?.childImageSharp?.fluid}
+                  data-overlay-dark="6"
+                  style={bgImageStyles}
+                >
                   <div className="container">
                     <div className="row">
                       <div className="col-lg-8 slideTextBG">
@@ -157,7 +186,7 @@ const Intro5 = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </BackgroundImage>
               </SwiperSlide>
           </Swiper>
         ) : null}
