@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import removeSlashFromPagination from "common/removeSlashpagination";
 import fadeWhenScroll from "common/fadeWhenScroll";
+import BackgroundImage from "gatsby-background-image";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -19,17 +20,33 @@ const IntroWithSlider = ({ sliderRef }) => {
   // Get the image files using GraphQL
   const data = useStaticQuery(graphql`
     query {
-      teamImage: cloudinaryMedia(public_id: { eq: "team_1_sj6t0g" }) {
-        secure_url
+      teamImage: file(relativePath: { eq: "img/team.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
-      monaImage: cloudinaryMedia(public_id: { eq: "mona_xbbcvn" }) {
-        secure_url
+      monaImage: file(relativePath: { eq: "img/mona.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
-      billImage: cloudinaryMedia(public_id: { eq: "bill2" }) {
-        secure_url
+      billImage: file(relativePath: { eq: "img/bill.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
-      whitImage: cloudinaryMedia(public_id: { eq: "whit_vrwkbc" }) {
-        secure_url
+      whitImage: file(relativePath: { eq: "img/whit.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   `);
@@ -61,11 +78,13 @@ const IntroWithSlider = ({ sliderRef }) => {
         >
           {/* Swiper slides */}
           <SwiperSlide key="1" className="swiper-slide">
-          <div
-                className="bg-img valign slideImg"
-                style={{ ...bgImageStyles, backgroundImage: `url(${data.teamImage.secure_url})` }}
-                data-overlay-dark="6"
-              >
+            <BackgroundImage
+              Tag="div"
+              className="bg-img valign slideImg"
+              fluid={data.teamImage?.childImageSharp?.fluid}
+              data-overlay-dark="6"
+              style={bgImageStyles}
+            >
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-8 col-md-10">
@@ -74,21 +93,23 @@ const IntroWithSlider = ({ sliderRef }) => {
                       <p>
                         Our firm motto says it all.  We listen.  We care.  We help.  We aim to improve the lives and well-being of each and every client that walks through our door.
                       </p>
-                      <Link to="/testimonials/" className="butn bord curve mt-30">
-                        <span>Read our Testimonials</span>
+                      <Link to="/about/about-dark" className="butn bord curve mt-30">
+                        <span>Look More</span>
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </BackgroundImage>
           </SwiperSlide>
           <SwiperSlide key="2" className="swiper-slide">
-          <div
-                className="bg-img valign"
-                style={{ ...bgImageStyles, backgroundImage: `url(${data.monaImage.secure_url})` }}
-                data-overlay-dark="6"
-              >
+            <BackgroundImage
+              Tag="div"
+              className="bg-img valign"
+              fluid={data.monaImage?.childImageSharp?.fluid}
+              data-overlay-dark="6"
+              style={bgImageStyles}
+            >
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-8 col-md-10">
@@ -97,21 +118,23 @@ const IntroWithSlider = ({ sliderRef }) => {
                       <p>
                         Mona Lisa founded our firm in 1981, and has been working tirelessly ever since in her fight for fairness and justice.  She has received numerous awards and acknowledgements for her successful representation of thousands of injured and harmed employees and consumers nationwide.
                       </p>
-                      <Link to="/attorneys/" className="butn bord curve mt-30">
-                        <span>Meet our Attorneys</span>
+                      <Link to="/about/about-dark" className="butn bord curve mt-30">
+                        <span>Look More</span>
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </BackgroundImage>
           </SwiperSlide>
           <SwiperSlide key="3" className="swiper-slide">
-          <div
-                className="bg-img valign"
-                style={{ ...bgImageStyles, backgroundImage: `url(${data.billImage.secure_url})` }}
-                data-overlay-dark="6"
-              >
+            <BackgroundImage
+              Tag="div"
+              className="bg-img valign"
+              fluid={data.billImage?.childImageSharp?.fluid}
+              data-overlay-dark="6"
+              style={bgImageStyles}
+            >
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-8 col-md-10">
@@ -120,21 +143,23 @@ const IntroWithSlider = ({ sliderRef }) => {
                       <p>
                         Bill uses his compassion and decades of legal experience to help individuals
                       </p>
-                      <Link to="/team/" className="butn bord curve mt-30">
-                        <span>Meet our Team</span>
+                      <Link to="/about/about-dark" className="butn bord curve mt-30">
+                        <span>Look More</span>
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </BackgroundImage>
           </SwiperSlide>
           <SwiperSlide key="4" className="swiper-slide">
-          <div
-                className="bg-img valign"
-                style={{ ...bgImageStyles, backgroundImage: `url(${data.whitImage.secure_url})` }}
-                data-overlay-dark="6"
-              >
+            <BackgroundImage
+              Tag="div"
+              className="bg-img valign"
+              fluid={data.whitImage?.childImageSharp?.fluid}
+              data-overlay-dark="6"
+              style={bgImageStyles}
+            >
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-8 col-md-10">
@@ -143,14 +168,14 @@ const IntroWithSlider = ({ sliderRef }) => {
                       <p>
                         We find joy in investigating legal harms and to potentially helping another deserving client.
                       </p>
-                      <Link to="/about-us/" className="butn bord curve mt-30">
-                        <span>Learn more about us.</span>
+                      <Link to="/about/about-dark" className="butn bord curve mt-30">
+                        <span>Look More</span>
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </BackgroundImage>
           </SwiperSlide>
         </Swiper>
         <div className="setone setwo">
