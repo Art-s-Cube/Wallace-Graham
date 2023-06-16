@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from "gatsby";
 import removeSlashFromPagination from "common/removeSlashpagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
-import BackgroundImage from "gatsby-background-image";
 
 
 SwiperCore.use([Navigation, Pagination, Parallax]);
@@ -75,10 +74,6 @@ const Intro5 = () => {
                 swiper.navigation.destroy();
                 swiper.navigation.init();
                 swiper.navigation.update();
-
-                swiper.pagination.destroy();
-                swiper.pagination.init();
-                swiper.pagination.update();
               });
             }}
             className="swiper-wrapper"
@@ -86,7 +81,7 @@ const Intro5 = () => {
           >
               <SwiperSlide key="1" className="swiper-slide">
                 <div
-                  className="bg-img valign slideImg"
+                  className="bg-img valign slideImg teamImg"
                   style={{ ...bgImageStyles, backgroundImage: `url(${data.teamImage.secure_url})` }}
                   data-overlay-dark="6"
                 >
