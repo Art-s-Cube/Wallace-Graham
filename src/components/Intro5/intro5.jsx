@@ -24,33 +24,17 @@ const Intro5 = () => {
   }, []);
   const data = useStaticQuery(graphql`
     query {
-      teamImage: file(relativePath: { eq: "img/team.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+      teamImage: cloudinaryMedia(public_id: { eq: "team_1_sj6t0g" }) {
+        secure_url
       }
-      monaImage: file(relativePath: { eq: "img/mona.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+      monaImage: cloudinaryMedia(public_id: { eq: "mona_xbbcvn" }) {
+        secure_url
       }
-      billImage: file(relativePath: { eq: "img/bill.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+      billImage: cloudinaryMedia(public_id: { eq: "bill2" }) {
+        secure_url
       }
-      whitImage: file(relativePath: { eq: "img/whit.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+      whitImage: cloudinaryMedia(public_id: { eq: "whit_vrwkbc" }) {
+        secure_url
       }
     }
   `);
@@ -101,13 +85,11 @@ const Intro5 = () => {
             slidesPerView={1}
           >
               <SwiperSlide key="1" className="swiper-slide">
-                <BackgroundImage
-                    Tag="div"
-                    className="bg-img valign slideImg"
-                    fluid={data.teamImage?.childImageSharp?.fluid}
-                    data-overlay-dark="6"
-                    style={bgImageStyles}
-                  >
+                <div
+                  className="bg-img valign slideImg"
+                  style={{ ...bgImageStyles, backgroundImage: `url(${data.teamImage.secure_url})` }}
+                  data-overlay-dark="6"
+                >
                   <div className="container">
                     <div className="row">
                       <div className="col-lg-8 slideTextBG">
@@ -120,16 +102,14 @@ const Intro5 = () => {
                       </div>
                     </div>
                   </div>
-                </BackgroundImage>
+                </div>
               </SwiperSlide>
               <SwiperSlide key="2" className="swiper-slide">
-                <BackgroundImage
-                    Tag="div"
-                    className="bg-img valign"
-                    fluid={data.monaImage?.childImageSharp?.fluid}
-                    data-overlay-dark="6"
-                    style={bgImageStyles}
-                  >
+                <div
+                  className="bg-img valign"
+                  style={{ ...bgImageStyles, backgroundImage: `url(${data.monaImage.secure_url})` }}
+                  data-overlay-dark="6"
+                >
                   <div className="container">
                     <div className="row">
                       <div className="col-lg-8 slideTextBG">
@@ -142,16 +122,14 @@ const Intro5 = () => {
                       </div>
                     </div>
                   </div>
-                </BackgroundImage>
+                </div>
               </SwiperSlide>
               <SwiperSlide key="3" className="swiper-slide">
-                <BackgroundImage
-                  Tag="div"
-                  className="bg-img valign"
-                  fluid={data.billImage?.childImageSharp?.fluid}
-                  data-overlay-dark="6"
-                  style={bgImageStyles}
-                >
+              <div
+                className="bg-img valign"
+                style={{ ...bgImageStyles, backgroundImage: `url(${data.billImage.secure_url})` }}
+                data-overlay-dark="6"
+              >
                   <div className="container">
                     <div className="row">
                       <div className="col-lg-8 slideTextBG">
@@ -164,16 +142,14 @@ const Intro5 = () => {
                       </div>
                     </div>
                   </div>
-                </BackgroundImage>
+                </div>
               </SwiperSlide>
               <SwiperSlide key="3" className="swiper-slide">
-                <BackgroundImage
-                  Tag="div"
-                  className="bg-img valign"
-                  fluid={data.whitImage?.childImageSharp?.fluid}
-                  data-overlay-dark="6"
-                  style={bgImageStyles}
-                >
+              <div
+                className="bg-img valign"
+                style={{ ...bgImageStyles, backgroundImage: `url(${data.whitImage.secure_url})` }}
+                data-overlay-dark="6"
+              >
                   <div className="container">
                     <div className="row">
                       <div className="col-lg-8 slideTextBG">
@@ -186,7 +162,7 @@ const Intro5 = () => {
                       </div>
                     </div>
                   </div>
-                </BackgroundImage>
+                </div>
               </SwiperSlide>
           </Swiper>
         ) : null}
