@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'gatsby';
 import "swiper/css";
 import "swiper/css/navigation";
 import intro5Data from "data/sections/intro5.json";
@@ -39,11 +38,7 @@ const Intro5 = () => {
               clickable: true,
               el: paginationRef.current,
             }}
-            onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = navigationPrevRef.current;
-              swiper.params.navigation.nextEl = navigationNextRef.current;
-              swiper.params.pagination.el = paginationRef.current;
-            }}
+            
             onSwiper={(swiper) => {
               setTimeout(() => {
                 for (var i = 0; i < swiper.slides.length; i++) {
@@ -81,7 +76,6 @@ const Intro5 = () => {
                     <div className="row">
                       <div className="col-lg-6">
                         <div className="caption mt-30">
-                          <h5>0{index + 1} .</h5>
                           <h1>
                             {typeof slide.title === "object" ? (
                               <>

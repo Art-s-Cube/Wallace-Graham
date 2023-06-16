@@ -11,7 +11,7 @@ const HeadComponents = [
   <meta key="keywords" name="keywords" content="personal injury lawyers north carolina, personal injury lawyer salisbury, personal injury attorneys salisbury, personal injury lawyer kannapolis, personal injury lawyer concord, mesothelioma lawyers, Cancer lawyers, workers compensation north carolina, social security disability attorney salisbury nc, social security disability lawyer salisbury nc" />,
   <meta key="description" name="description" content="Wallace and Graham a law firm in the small town of Salisbury, North Carolina." />,
   <meta key="author" name="author" content="Arts Cube" />,
-  <link rel="preconnect" href="/css/home.css" />,
+  <link key="crit" rel="stylesheet" href="/css/home.css" />,
   // Google Fonts
   <link key="Poppins" media="print" onLoad="this.onload=null;this.removeAttribute('media');" rel="preconnect" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" crossOrigin="true"/>,
   <link key="Montserrat" media="print" onLoad="this.onload=null;this.removeAttribute('media');" rel="preconnect" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap" crossOrigin="true"/>,
