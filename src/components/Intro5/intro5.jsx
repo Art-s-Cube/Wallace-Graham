@@ -24,28 +24,28 @@ const Intro5 = () => {
   }, []);
   const data = useStaticQuery(graphql`
     query {
-      teamImage: file(relativePath: { eq: "img/team.jpg" }) {
+      teamImage: file(relativePath: { eq: "img/team1.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      monaImage: file(relativePath: { eq: "img/mona.jpg" }) {
+      monaImage: file(relativePath: { eq: "img/mona2.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      billImage: file(relativePath: { eq: "img/bill.jpg" }) {
+      billImage: file(relativePath: { eq: "img/bill3.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      whitImage: file(relativePath: { eq: "img/whit.jpg" }) {
+      whitImage: file(relativePath: { eq: "img/whit2.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -103,7 +103,7 @@ const Intro5 = () => {
               <SwiperSlide key="1" className="swiper-slide">
                 <BackgroundImage
                     Tag="div"
-                    className="bg-img valign slideImg"
+                    className="bg-img valign slideImg teamImg"
                     fluid={data.teamImage?.childImageSharp?.fluid}
                     data-overlay-dark="6"
                     style={bgImageStyles}
