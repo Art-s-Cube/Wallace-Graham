@@ -82,7 +82,7 @@ const VideoWithTestimonials = () => {
                     <div className="info">
                       <div className="cont">
                         <div className="author">
-                          <h6 className="author-name ">Lawrence</h6>
+                          <h7 className="author-name ">Lawrence</h7>
                         </div>
                       </div>
                     </div>
@@ -95,7 +95,7 @@ const VideoWithTestimonials = () => {
                     <div className="info">
                       <div className="cont">
                         <div className="author">
-                          <h6 className="author-name ">Greg</h6>
+                          <h7 className="author-name ">Greg</h7>
                         </div>
                       </div>
                     </div>
@@ -108,7 +108,7 @@ const VideoWithTestimonials = () => {
                     <div className="info">
                       <div className="cont">
                         <div className="author">
-                          <h6 className="author-name ">Barbara</h6>
+                          <h7 className="author-name ">Barbara</h7>
                         </div>
                       </div>
                     </div>

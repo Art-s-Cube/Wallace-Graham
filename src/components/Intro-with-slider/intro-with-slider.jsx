@@ -25,7 +25,7 @@ const IntroWithSlider = ({ sliderRef }) => {
       monaImage: cloudinaryMedia(public_id: { eq: "mona_xbbcvn" }) {
         secure_url
       }
-      billImage: cloudinaryMedia(public_id: { eq: "bill1_yi8a9i" }) {
+      billImage: cloudinaryMedia(public_id: { eq: "bill2" }) {
         secure_url
       }
       whitImage: cloudinaryMedia(public_id: { eq: "whit_vrwkbc" }) {
