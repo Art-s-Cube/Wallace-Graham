@@ -69,3 +69,5 @@ export const Head = () => {
     </>
   );
 };
+
+export default Homepage1;
