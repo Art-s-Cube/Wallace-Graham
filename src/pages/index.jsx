@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import IntroWithSlider from "components/Intro-with-slider/intro-with-slider";
-import Intro5 from "components/Intro5/intro5";
 import LightTheme from "layouts/Light";
 import Navbar from "components/Navbar/navbar";
 import AboutUs from "components/About-us/about-us";
@@ -47,8 +46,10 @@ const Homepage1 = ({ data }) => {
     <LightTheme>
       <>
         <Navbar nr={navbarRef} lr={logoRef} />
-
-        <Intro5 />
+        <header class="slider slider-prlx fixed-slider text-center slideHeight">
+        <IntroWithSlider
+          sliderRef={fixedSlider}
+        /></header>
         <div ref={MainContent} className="main-content">
           <AboutUs />
           <PracticeArea />
@@ -68,17 +69,3 @@ export const Head = () => {
     </>
   );
 };
-
-export default Homepage1;
-export const query = graphql`
-  query {
-    allCloudinaryMedia {
-      edges {
-        node {
-          secure_url
-          public_id
-        }
-      }
-    }
-  }
-`;
