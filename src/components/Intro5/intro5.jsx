@@ -80,7 +80,6 @@ const Intro5 = () => {
                     <div className="row">
                       <div className="col-lg-6">
                         <div className="caption mt-30">
-                          <h5>0{index + 1} .</h5>
                           <h1>
                             {typeof slide.title === "object" ? (
                               <>
@@ -91,14 +90,6 @@ const Intro5 = () => {
                             )}
                           </h1>
                           {slide?.content && <p>{slide.content}</p>}
-                        </div>
-                      </div>
-                      <div className="col-lg-4 valign">
-                        <div className="explore">
-                          <Link to="/project-details2/project-details2-dark"> 
-                            Explore Project
-                            <i className="ion-chevron-right"></i>
-                          </Link>
                         </div>
                       </div>
                     </div>
