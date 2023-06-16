@@ -46,9 +46,10 @@ const Homepage1 = ({ data }) => {
     <LightTheme>
       <>
         <Navbar nr={navbarRef} lr={logoRef} />
+        <header class="slider slider-prlx fixed-slider text-center slideHeight">
         <IntroWithSlider
           sliderRef={fixedSlider}
-        />
+        /></header>
         <div ref={MainContent} className="main-content">
           <AboutUs />
           <PracticeArea />

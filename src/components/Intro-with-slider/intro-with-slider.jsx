@@ -61,7 +61,6 @@ const IntroWithSlider = ({ sliderRef }) => {
   };
 
   return (
-    <header ref={sliderRef} className="slider slider-prlx fixed-slider text-center slideHeight">
       <div className="swiper-container parallax-slider">
         <Swiper
           navigation={{
@@ -193,7 +192,6 @@ const IntroWithSlider = ({ sliderRef }) => {
           </div>
         </div>
       </div>
-    </header>
   );
 };
 export default IntroWithSlider;
