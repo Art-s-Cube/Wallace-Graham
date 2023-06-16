@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import IntroWithSlider from "components/Intro-with-slider/intro-with-slider";
 import LightTheme from "layouts/Light";
 import Navbar from "components/Navbar/navbar";
@@ -69,3 +70,15 @@ export const Head = () => {
 };
 
 export default Homepage1;
+export const query = graphql`
+  query {
+    allCloudinaryMedia {
+      edges {
+        node {
+          secure_url
+          public_id
+        }
+      }
+    }
+  }
+`;

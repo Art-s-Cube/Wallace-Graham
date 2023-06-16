@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/css";
@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import removeSlashFromPagination from "common/removeSlashpagination";
 import fadeWhenScroll from "common/fadeWhenScroll";
+import BackgroundImage from "gatsby-background-image";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -16,6 +17,24 @@ const IntroWithSlider = ({ sliderRef }) => {
     removeSlashFromPagination();
   }, []);
 
+  // Get the image files using GraphQL
+  const data = useStaticQuery(graphql`
+    query {
+      teamImage: cloudinaryMedia(public_id: { eq: "team_1_sj6t0g" }) {
+        secure_url
+      }
+      monaImage: cloudinaryMedia(public_id: { eq: "mona_xbbcvn" }) {
+        secure_url
+      }
+      billImage: cloudinaryMedia(public_id: { eq: "bill1_yi8a9i" }) {
+        secure_url
+      }
+      whitImage: cloudinaryMedia(public_id: { eq: "whit_vrwkbc" }) {
+        secure_url
+      }
+    }
+  `);
+
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   const paginationRef = React.useRef(null);
@@ -24,12 +43,6 @@ const IntroWithSlider = ({ sliderRef }) => {
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
-
-  // Replace these URLs with your Cloudinary image URLs
-  const teamImageUrl = "https://res.cloudinary.com/wallacegraham/image/upload/v1686857295/team_1_sj6t0g.jpg";
-  const monaImageUrl = "https://res.cloudinary.com/wallacegraham/image/upload/v1686858327/mona_xbbcvn.jpg";
-  const billImageUrl = "https://res.cloudinary.com/wallacegraham/image/upload/v1686858441/bill1_yi8a9i.jpg";
-  const whitImageUrl = "https://res.cloudinary.com/wallacegraham/image/upload/v1686858328/whit_vrwkbc.jpg";
 
   return (
     <header ref={sliderRef} className="slider slider-prlx fixed-slider text-center">
@@ -49,14 +62,11 @@ const IntroWithSlider = ({ sliderRef }) => {
         >
           {/* Swiper slides */}
           <SwiperSlide key="1" className="swiper-slide">
-            <div
-              className="bg-img valign slideImg"
-              style={{
-                backgroundImage: `url(${teamImageUrl})`,
-                ...bgImageStyles,
-              }}
-              data-overlay-dark="6"
-            >
+          <div
+                className="bg-img valign slideImg"
+                style={{ ...bgImageStyles, backgroundImage: `url(${data.teamImage.secure_url})` }}
+                data-overlay-dark="6"
+              >
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-8 col-md-10">
@@ -75,14 +85,11 @@ const IntroWithSlider = ({ sliderRef }) => {
             </div>
           </SwiperSlide>
           <SwiperSlide key="2" className="swiper-slide">
-            <div
-              className="bg-img valign"
-              style={{
-                backgroundImage: `url(${monaImageUrl})`,
-                ...bgImageStyles,
-              }}
-              data-overlay-dark="6"
-            >
+          <div
+                className="bg-img valign"
+                style={{ ...bgImageStyles, backgroundImage: `url(${data.monaImage.secure_url})` }}
+                data-overlay-dark="6"
+              >
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-8 col-md-10">
@@ -101,14 +108,11 @@ const IntroWithSlider = ({ sliderRef }) => {
             </div>
           </SwiperSlide>
           <SwiperSlide key="3" className="swiper-slide">
-            <div
-              className="bg-img valign"
-              style={{
-                backgroundImage: `url(${billImageUrl})`,
-                ...bgImageStyles,
-              }}
-              data-overlay-dark="6"
-            >
+          <div
+                className="bg-img valign"
+                style={{ ...bgImageStyles, backgroundImage: `url(${data.billImage.secure_url})` }}
+                data-overlay-dark="6"
+              >
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-8 col-md-10">
@@ -127,14 +131,11 @@ const IntroWithSlider = ({ sliderRef }) => {
             </div>
           </SwiperSlide>
           <SwiperSlide key="4" className="swiper-slide">
-            <div
-              className="bg-img valign"
-              style={{
-                backgroundImage: `url(${whitImageUrl})`,
-                ...bgImageStyles,
-              }}
-              data-overlay-dark="6"
-            >
+          <div
+                className="bg-img valign"
+                style={{ ...bgImageStyles, backgroundImage: `url(${data.whitImage.secure_url})` }}
+                data-overlay-dark="6"
+              >
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-8 col-md-10">
