@@ -9242,3 +9242,4 @@ section.next-prog.section-padding {
 .item .cont .newsTitle{font-size: 20px}
 .info .date, .info .authorName, .info .source {padding:10px 15px 0 0}
 .slideTextBG{background: #0000009c;}
+.slideHeight{max-height:1275px;height: auto;}
