@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import removeSlashFromPagination from "common/removeSlashpagination";
 import fadeWhenScroll from "common/fadeWhenScroll";
-import BackgroundImage from "gatsby-background-image";
 
 SwiperCore.use([Navigation, Pagination]);
 
