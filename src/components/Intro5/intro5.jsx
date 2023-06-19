@@ -27,28 +27,28 @@ const Intro5 = () => {
       teamImage: file(relativePath: { eq: "img/team.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
+            srcSetWebp
           }
         }
       }
       monaImage: file(relativePath: { eq: "img/mona.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
+            srcSetWebp
           }
         }
       }
       billImage: file(relativePath: { eq: "img/bill.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
+            srcSetWebp
           }
         }
       }
       whitImage: file(relativePath: { eq: "img/whit.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
+            srcSetWebp
           }
         }
       }
