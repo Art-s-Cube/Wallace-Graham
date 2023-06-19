@@ -37,8 +37,6 @@ const AboutUs = () => {
           <GatsbyImage
               image={getImage(data.aboutImage)}
               alt="About Us"
-              width={500}
-              height={580}
             />
           </div>
         </div>
