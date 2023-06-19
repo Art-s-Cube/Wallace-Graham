@@ -126,7 +126,7 @@ exports.createPages = async ({ graphql, actions }) => {
         author: newsItem.author,
         body: newsItem.body.raw,
         date: newsItem.date,
-        imageUrl: newsItem.image.file.url,
+        imageUrl: newsItem.image.url,
         headline: newsItem.headline,
         slug: slug,
         source: newsItem.source,
