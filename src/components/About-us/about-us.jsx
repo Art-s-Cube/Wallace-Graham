@@ -5,9 +5,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const AboutUs = () => {
   const data = useStaticQuery(graphql`
   query {
-    aboutImage: file(relativePath: { eq: "img/feat.jpg" }) {
+    aboutImage: file(relativePath: {eq: "img/feat.jpg"}) {
       childImageSharp {
-        gatsbyImageData(width: 500, quality: 100, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        gatsbyImageData(quality: 90, width: 500, height: 580)
       }
     }
   }
