@@ -41,6 +41,7 @@ const VideoWithTestimonials = () => {
         <GatsbyImage
           image={getImage(data.teamImage.childImageSharp.gatsbyImageData)}
           alt="Team Image"
+          loading="eager"
           style={{
             position: "absolute",
             top: 0,
