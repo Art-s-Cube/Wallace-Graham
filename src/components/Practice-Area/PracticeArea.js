@@ -42,7 +42,7 @@ const PracticeArea = () => {
                   <div className="col-md-4 col-6 mb-20">
                     <div key={node.title}>
                       {node.image && (
-                        <GatsbyImage image={getImage(node.image)} alt={node.image.title} />
+                        <GatsbyImage image={getImage(node.image)} alt={node.title} />
                       )}
                     </div>
                     <a
