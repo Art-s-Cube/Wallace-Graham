@@ -15,8 +15,8 @@ const HeadComponents = [
   <link key="Poppins" media="print" onLoad="this.onload=null;this.removeAttribute('media');" rel="preconnect" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" crossOrigin="true"/>,
   <link key="Montserrat" media="print" onLoad="this.onload=null;this.removeAttribute('media');" rel="preconnect" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap" crossOrigin="true"/>,
   // Styles
-  <link key="ionicons" rel="stylesheet" href="/css/ionicons.min.css" />,
-  <link key="styles-light" rel="stylesheet" href="/css/light.css" />,
+  //<link key="ionicons" rel="stylesheet" href="/css/ionicons.min.css" />,
+  <link key="styles-light" rel="stylesheet" href="/css/light.min.css" />,
   <link key="boot" rel="stylesheet" href="/css/bootstrap.min.css" />,
   <link key="animate" rel="stylesheet" href="/css/animate.css" />,
   <link key="awe" rel="stylesheet" href="/css/font-awesome.css" />,
