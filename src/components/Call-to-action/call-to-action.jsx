@@ -6,7 +6,7 @@ const CallToAction = () => {
     return (
       <section
         className="call-action section-padding sub-bg bg-img"
-        style={{ backgroundImage: `url(/img/patrn.svg")` }}
+        style={{ backgroundImage: `url('/img/patrn.svg')` }}
       >
         <div className="container">
           <div className="row">
@@ -16,9 +16,9 @@ const CallToAction = () => {
                   <h6 className="fw-300 text-u ls10 mb-10 fz-25">
                     Request   a
                   </h6>
-                  <h2 className="wow words chars splitting" data-splitting>
+                  <h7 className="wow words chars splitting h2Style" data-splitting>
                     Free <br/><b className="back-color">Consultation</b>
-                  </h2>
+                  </h7>
                 </Split>
               </div>
             </div>

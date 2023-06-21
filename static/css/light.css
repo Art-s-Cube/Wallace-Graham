@@ -9143,3 +9143,7 @@ section.next-prog.section-padding {
 .info .date, .info .authorName, .info .source {padding:10px 15px 0 0}
 .slideTextBG{background: #0000009c;}
 .slideHeight{max-height:1275px;height: auto;}
+.h2Style{}
+.call-action .content .h2Style {font-weight: 700;font-size: 4vw;line-height: 1.2;text-transform: uppercase;margin-bottom: 20px;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: #000;color: transparent;}
+.call-action .content .h2Style span {color: #ffffff;}
+.call-action .content .h2Style b span{color: #fff;-webkit-text-stroke-width: 1px;}
