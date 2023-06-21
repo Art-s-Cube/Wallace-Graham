@@ -98,6 +98,7 @@ const Intro5 = () => {
                   <GatsbyImage
                     image={getImage(data.teamImage.childImageSharp.gatsbyImageData)}
                     alt="Team Image"
+                    loading="eager"
                     style={{
                       position: "absolute",
                       top: 0,
@@ -140,6 +141,7 @@ const Intro5 = () => {
                   <GatsbyImage
                     image={getImage(data.monaImage.childImageSharp.gatsbyImageData)}
                     alt="Team Image"
+                    loading="lazy"
                     style={{
                       position: "absolute",
                       top: 0,
@@ -180,6 +182,7 @@ const Intro5 = () => {
                   <GatsbyImage
                     image={getImage(data.billImage.childImageSharp.gatsbyImageData)}
                     alt="Team Image"
+                    loading="lazy"
                     style={{
                       position: "absolute",
                       top: 0,
@@ -220,6 +223,7 @@ const Intro5 = () => {
                   <GatsbyImage
                     image={getImage(data.whitImage.childImageSharp.gatsbyImageData)}
                     alt="Team Image"
+                    loading="lazy"
                     style={{
                       position: "absolute",
                       top: 0,
