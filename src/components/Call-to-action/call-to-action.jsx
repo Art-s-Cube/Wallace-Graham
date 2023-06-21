@@ -4,10 +4,7 @@ import { Link } from 'gatsby'
 
 const CallToAction = () => {
     return (
-      <section
-        className="call-action section-padding sub-bg bg-img"
-        style={{ backgroundImage: `url('/img/patrn.svg')` }}
-      >
+      <section className="call-action section-padding sub-bg bg-img">
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-lg-9">
