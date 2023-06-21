@@ -7,7 +7,7 @@ const AboutUs = () => {
   query {
     aboutImage: file(relativePath: {eq: "img/feat.jpg"}) {
       childImageSharp {
-        gatsbyImageData(quality: 90, width: 500, height: 580)
+        gatsbyImageData(quality: 80, width: 500, placeholder: BLURRED)
       }
     }
   }
