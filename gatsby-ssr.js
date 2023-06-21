@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Script } from "gatsby"
 const HtmlAttributes = {
   lang: "en"
 }
@@ -25,10 +25,10 @@ const HeadComponents = [
   // Icon
   <link key="icon" rel="shortcut icon" href="/img/favicon.ico" title="Favicon" sizes="16x16" />,
   // Scripts
-  <script key="isotope" src="/js/isotope.pkgd.min.js"></script>,
-  <script key="splitting" src="/js/splitting.min.js"></script>,
-  <script key="simpleParallax" src="/js/simpleParallax.min.js"></script>,
-  <script key="wow" src="/js/wow.min.js"></script>,
+  <Script key="isotope" src="/js/isotope.pkgd.min.js"/>,
+  <Script key="splitting" src="/js/splitting.min.js"/>,
+  <Script key="simpleParallax" src="/js/simpleParallax.min.js"/>,
+  <Script key="wow" src="/js/wow.min.js"/>,
 ]
 
 export const onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
