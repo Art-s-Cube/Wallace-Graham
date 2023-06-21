@@ -45,11 +45,7 @@ const PracticeArea = () => {
                         <GatsbyImage image={getImage(node.image)} alt={node.title} />
                       )}
                     </div>
-                    <a
-                      href="#0"
-                      className="link fz-12"
-                      data-splitting
-                    >
+                    <a href="#0" className="link fz-12" >
                       {node.title}
                     </a>
                   </div>

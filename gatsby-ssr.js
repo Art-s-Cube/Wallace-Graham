@@ -26,7 +26,7 @@ const HeadComponents = [
   <link key="icon" rel="shortcut icon" href="/img/favicon.ico" title="Favicon" sizes="16x16" />,
   // Scripts
   <Script key="isotope" src="/js/isotope.pkgd.min.js"></Script>,
-  <script key="splitting" src="/js/splitting.min.js"></script>,
+  //<script key="splitting" src="/js/splitting.min.js"></script>,
   <Script key="simpleParallax" src="/js/simpleParallax.min.js"></Script>,
   <script key="wow" src="/js/wow.min.js"></script>,
 ]

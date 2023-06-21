@@ -9,14 +9,14 @@ const CallToAction = () => {
           <div className="row">
             <div className="col-md-8 col-lg-9">
               <div className="content sm-mb30">
-                <Split>
+                <div>
                   <h6 className="fw-300 text-u ls10 mb-10 fz-25">
                     Request   a
                   </h6>
-                  <h7 className="wow words chars splitting h2Style" data-splitting>
+                  <h7 className="h2Style">
                     Free <br/><b className="back-color">Consultation</b>
                   </h7>
-                </Split>
+                </div>
               </div>
             </div>
 
