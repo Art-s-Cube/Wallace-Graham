@@ -70,8 +70,8 @@ const VideoWithTestimonials = () => {
             <div className="col-lg-5 offset-lg-1"> 
               <div className="testim-box"> 
                 <div className="head-box"> 
-                  <h6> Our Clients </h6> 
-                  <h4> What Client&apos;s Say? </h4> 
+                  <h4 className="h6Style"> Our Clients </h4> 
+                  <h5 className="h4Style"> What Client&apos;s Say? </h5> 
                 </div> 
                 <Slider {...settings} className="slic-item" > 
                   <div className="item"> 
