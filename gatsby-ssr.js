@@ -19,8 +19,8 @@ const HeadComponents = [
   <link key="styles-light" rel="stylesheet" href="/css/light.css" />,
   <link key="boot" rel="stylesheet" href="/css/bootstrap.min.css" />,
   <link key="animate" rel="stylesheet" href="/css/animate.css" />,
-  <link key="awe" rel="stylesheet" href="/css/font-awesome.min.css" />,
-  <link key="icon" rel="stylesheet" href="/css/pe-icon.min.css" />,
+  <link key="awe" rel="stylesheet" href="/css/font-awesome.css" />,
+ // <link key="icon" rel="stylesheet" href="/css/pe-icon.min.css" />,
   <link key="crit" rel="stylesheet" href="/css/home.css" />,
   // Icon
   <link key="icon" rel="shortcut icon" href="/img/favicon.ico" title="Favicon" sizes="16x16" />,

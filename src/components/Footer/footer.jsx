@@ -12,21 +12,21 @@ const Footer = ({ hideBGCOLOR }) => {
               </div>
               <ul>
                 <li>
-                  <span className="icon pe-7s-map-marker"></span>
+                  <span className="fa fa-map-marker-alt"></span>
                   <div className="cont">
                     <h6>Officeal Address</h6>
                     <p>525 N. Main St., Salisbury NC, 28144</p>
                   </div>
                 </li>
                 <li>
-                  <span className="icon pe-7s-call"></span>
+                  <span className="fa fa-phone"></span>
                   <div className="cont">
                     <h6>Call Us</h6>
                     <p>800.849.5291</p>
                   </div>
                 </li>
                 <li>
-                  <span className="icon pe-7s-call"></span>
+                  <span className="fa fa-phone"></span>
                   <div className="cont">
                     <h6>Call Us</h6>
                     <p>704.633.5244</p>
