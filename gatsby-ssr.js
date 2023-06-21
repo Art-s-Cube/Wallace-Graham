@@ -25,10 +25,10 @@ const HeadComponents = [
   // Icon
   <link key="icon" rel="shortcut icon" href="/img/favicon.ico" title="Favicon" sizes="16x16" />,
   // Scripts
-  <Script key="isotope" src="/js/isotope.pkgd.min.js"/>,
-  <Script key="splitting" src="/js/splitting.min.js"/>,
-  <Script key="simpleParallax" src="/js/simpleParallax.min.js"/>,
-  <Script key="wow" src="/js/wow.min.js"/>,
+  <Script key="isotope" src="/js/isotope.pkgd.min.js"></Script>,
+  <Script key="splitting" src="/js/splitting.min.js"></Script>,
+  <Script key="simpleParallax" src="/js/simpleParallax.min.js"></Script>,
+  <Script key="wow" src="/js/wow.min.js"></Script>,
 ]
 
 export const onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
