@@ -1,5 +1,4 @@
 import React from 'react'
-import Split from '../Split'
 import { Link } from 'gatsby'
 
 const CallToAction = () => {

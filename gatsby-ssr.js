@@ -12,8 +12,8 @@ const HeadComponents = [
   <meta key="description" name="description" content="Wallace and Graham a law firm in the small town of Salisbury, North Carolina." />,
   <meta key="author" name="author" content="Arts Cube" />,
   // Google Fonts
-  <link key="Poppins" media="print" onLoad="this.onload=null;this.removeAttribute('media');" rel="preconnect" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" crossOrigin="true"/>,
-  <link key="Montserrat" media="print" onLoad="this.onload=null;this.removeAttribute('media');" rel="preconnect" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap" crossOrigin="true"/>,
+  //<link key="Poppins" media="print" onLoad="this.onload=null;this.removeAttribute('media');" rel="preconnect" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" crossOrigin="true"/>,
+  //<link key="Montserrat" media="print" onLoad="this.onload=null;this.removeAttribute('media');" rel="preconnect" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap" crossOrigin="true"/>,
   // Styles
   //<link key="ionicons" rel="stylesheet" href="/css/ionicons.min.css" />,
   <link key="styles-light" rel="stylesheet" href="/css/light.min.css" />,
@@ -27,7 +27,7 @@ const HeadComponents = [
   // Scripts
   <Script key="isotope" src="/js/isotope.pkgd.min.js"></Script>,
   //<script key="splitting" src="/js/splitting.min.js"></script>,
-  <Script key="simpleParallax" src="/js/simpleParallax.min.js"></Script>,
+  //<Script key="simpleParallax" src="/js/simpleParallax.min.js"></Script>,
   <script key="wow" src="/js/wow.min.js"></script>,
 ]
 

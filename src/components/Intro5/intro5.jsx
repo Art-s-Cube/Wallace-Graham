@@ -57,7 +57,7 @@ const Intro5 = () => {
         {!load ? (
           <Swiper
             speed={1000}
-            parallax={true}
+            parallax={false}
             navigation={{
               prevEl: navigationPrevRef.current,
               nextEl: navigationNextRef.current,
