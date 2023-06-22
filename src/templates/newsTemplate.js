@@ -33,6 +33,7 @@ const NewsTemplate = ({ pageContext }) => {
 
   return (
     <LightTheme>
+      <title>{headline} | Wallace & Graham</title>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
       <div className="blogTitle">
         <PageHeader title={headline} paragraph="" />
@@ -44,7 +45,7 @@ const NewsTemplate = ({ pageContext }) => {
               <div className="post">
                 <div className="col-lg-12">
                   <div className="img">
-                    <img src={imageUrl} alt={headline} />
+                  <img src={imageUrl} alt={headline} />
                   </div>
                   <div className="info">
                     <span className="date">

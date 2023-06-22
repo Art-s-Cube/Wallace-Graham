@@ -1,5 +1,6 @@
 import React from "react";
 import attorneysData from "data/sections/attorneys.json";
+import { Link } from "gatsby";
 
 const Team4 = () => {
   return (
@@ -21,10 +22,12 @@ const Team4 = () => {
       <div className="container-fluid">
         <div className="row">
           {attorneysData.map((attorney) => (
-            <div key={attorney.id} className="col-lg-3 col-md-6">
+            
+            <div key={attorney.id} className="col-lg-3 col-md-6 mb-10">
+              <Link to={`/attorneys/${attorney.extension}`}>
               <div className="item cir">
-                <div className="img">
-                  <img src={attorney.image} alt={attorney.name} />
+                <div className="img attorneyListImg">
+                  <img src={attorney.image} alt={attorney.name} width="360" height="392"/>
                   <div id={`circle${attorney.id}`}>
                       <g>
                         <text fill="#fff">
@@ -36,12 +39,12 @@ const Team4 = () => {
                   </div>
                   <div className="info">
                     <h6>{attorney.name}</h6>
-                    <span>{attorney.position}</span>
-                    <span>{attorney.email}</span>
-                    <span>(704) 633-4244 ext.{attorney.extension}</span>
+                    <p className="text-extra-light-gray">{attorney.position}</p>
+                    <p className="text-extra-light-gray">{attorney.email}</p>
                   </div>
                 </div>
               </div>
+              </Link>
             </div>
           ))}
         </div>

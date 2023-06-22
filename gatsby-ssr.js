@@ -21,7 +21,8 @@ const HeadComponents = [
   // Icon
   <link key="icon" rel="shortcut icon" href="/img/favicon.ico" title="Favicon" sizes="16x16" />,
   // Scripts
-  <Script key="isotope" src="/js/isotope.pkgd.min.js"></Script>,
+  <script key="isotope" src="/js/isotope.pkgd.min.js"></script>,
+  <script key="pace" src="/js/pace.min.js"></script>,
 <script key="wow" src="/js/wow.min.js"></script>,
 ]
 

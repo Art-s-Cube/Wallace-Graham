@@ -43,6 +43,7 @@ const BlogGridLight = ({ data }) => {
       <PageHeader
         title="Our News."
         paragraph="All the most current news and events of our creative team."
+        className="section-padding"
       />
       <BlogGrid news={news} />
       <Footer />

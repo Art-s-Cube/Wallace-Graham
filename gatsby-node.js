@@ -126,11 +126,85 @@ exports.createPages = async ({ graphql, actions }) => {
         author: newsItem.author,
         body: newsItem.body.raw,
         date: newsItem.date,
-        imageUrl: newsItem.image.url,
+        imageUrl: newsItem.image.file.url,
         headline: newsItem.headline,
         slug: slug,
         source: newsItem.source,
       },
     });
   });
+
+
+  // Query for Attorneys
+  const attorneyResult = await graphql(`
+    query AttorneyQuery {
+      allContentfulAttorneys(sort: {position: DESC}) {
+        nodes {
+          about {
+            raw
+          }
+          affiliations {
+            raw
+          }
+          appointments {
+            raw
+          }
+          cases {
+            raw
+          }
+          charities {
+            raw
+          }
+          education {
+            raw
+          }
+          email
+          extension
+          honorsAwards {
+            raw
+          }
+          image {
+            resize(format: WEBP, width: 353) {
+              src
+            }
+          }
+          name
+          practiceAreas {
+            title
+          }
+        }
+      }
+      }
+  `);
+
+  if (attorneyResult.errors) {
+    throw attorneyResult.errors;
+  }
+
+  const attorneyItems = attorneyResult.data.allContentfulAttorneys.nodes;
+
+    attorneyItems.forEach((attorneyItem) => {
+      const cleanedName = attorneyItem.name ? attorneyItem.name.replace(/\?&/g, "") : "";
+      const slug = cleanedName.replace(/\s+/g, "-").toLowerCase();
+      createPage({
+        path: `/attorneys/${slug}`,
+        component: path.resolve("./src/templates/attorneysTemplate.js"),
+        context: {
+          name: attorneyItem.name || "",
+          about: attorneyItem.about ? attorneyItem.about.raw : "",
+          education: attorneyItem.education ? attorneyItem.education.raw : "",
+          affiliations: attorneyItem.affiliations ? attorneyItem.affiliations.raw : "",
+          appointments: attorneyItem.appointments ? attorneyItem.appointments.raw : "",
+          cases: attorneyItem.cases ? attorneyItem.cases.raw : "",
+          charities: attorneyItem.charities ? attorneyItem.charities.raw : "",
+          honors: attorneyItem.honorsAwards ? attorneyItem.honorsAwards.raw : "",
+          imageUrl: attorneyItem.image.resize.src,
+          practiceAreas: attorneyItem.practiceAreas ? attorneyItem.practiceAreas.map(area => area.title) : [],
+          slug: slug,
+          email: attorneyItem.email || "",
+          extension: attorneyItem.extension || "",
+        },
+      });
+    });
+
 };

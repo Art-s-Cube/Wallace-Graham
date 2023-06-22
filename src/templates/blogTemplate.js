@@ -33,6 +33,7 @@ const BlogTemplate = ({ pageContext }) => {
 
   return (
     <LightTheme>
+      <title>{title} | Wallace & Graham</title>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
       <div className="blogTitle">
         <PageHeader title={title} paragraph="" />

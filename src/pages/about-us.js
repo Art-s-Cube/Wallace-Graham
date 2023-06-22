@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "components/Navbar/navbar";
-import Services from "components/Services/services";
 import CallToAction from "components/Call-to-action/call-to-action";
 import Footer from "components/Footer/footer";
 import AboutIntro from "components/About-intro";
@@ -31,7 +30,7 @@ const About = () => {
   return (
     <LightTheme>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
-        <section className={`page-header`}>
+        <section className="section-padding">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-7 col-md-9">
@@ -44,7 +43,6 @@ const About = () => {
           </div>
         </section>
       <AboutIntro />
-      <Services style="3item" />
       <CallToAction />
       <Footer />
     </LightTheme>
