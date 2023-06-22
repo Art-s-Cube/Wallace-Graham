@@ -40,7 +40,7 @@ const BlogListLight = ({ data }) => {
       </div>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
       <PageHeader
-        className="sub-bg"
+        className="sub-bg section-padding"
         title="W&G Law Blog"
         paragraph=""
       />

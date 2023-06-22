@@ -1,8 +1,28 @@
 import React from "react";
-import attorneysData from "data/sections/attorneys.json";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 
 const Team4 = () => {
+  const data = useStaticQuery(graphql`
+    query AttorneyListQuery {
+      allContentfulAttorneys(sort: {order: ASC}) {
+        nodes {
+          about {
+            raw
+          }
+          email
+          image {
+            resize(format: WEBP, width: 353) {
+              src
+            }
+          }
+          name
+        }
+      }
+    }
+  `);
+
+  const attorneysData = data.allContentfulAttorneys.nodes;
+
   return (
     <section className="team section-padding">
       <div className="container">
@@ -21,36 +41,37 @@ const Team4 = () => {
       </div>
       <div className="container-fluid">
         <div className="row">
-          {attorneysData.map((attorney) => (
+          {attorneysData.map((attorney) => {
+            const cleanedName = attorney.name ? attorney.name.replace(/\?&/g, "") : "";
+            const slug = cleanedName.replace(/\s+/g, "-").toLowerCase();
             
-            <div key={attorney.id} className="col-lg-3 col-md-6 mb-10">
-              <Link to={`/attorneys/${attorney.extension}`}>
-              <div className="item cir">
-                <div className="img attorneyListImg">
-                  <img src={attorney.image} alt={attorney.name} width="360" height="392"/>
-                  <div id={`circle${attorney.id}`}>
-                      <g>
-                        <text fill="#fff">
-                          <textPath xlinkHref={`#circlePath${attorney.id}`}>
-                            {attorney.description}
-                          </textPath>
-                        </text>
-                      </g>
+            return (
+              <div key={slug} className="col-lg-3 col-md-6 mb-10">
+                <Link to={`/attorneys/${slug}`}>
+                  <div className="item cir">
+                    <div className="img attorneyListImg">
+                      <img src={attorney.image.resize.src} alt={attorney.name} width="360" height="392" />
+                      {/* ... rest of the code */}
+                      <div className="info">
+                        <h6>{attorney.name}</h6>
+                        <p className="text-extra-light-gray">{attorney.email}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="info">
-                    <h6>{attorney.name}</h6>
-                    <p className="text-extra-light-gray">{attorney.position}</p>
-                    <p className="text-extra-light-gray">{attorney.email}</p>
-                  </div>
-                </div>
+                </Link>
               </div>
-              </Link>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   );
 };
-
+export const Head = () => {
+  return (
+    <>
+      <title>Our Attorneys | Wallace & Graham</title>
+    </>
+  )
+}
 export default Team4;

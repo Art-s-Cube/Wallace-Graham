@@ -60,10 +60,10 @@ const AttorneyTemplate = ({ pageContext }) => {
             </div>
             <div className="col-lg-6 valign">
                 <div className="content">
-                    <h1 className="fz-50">{name}</h1>
-                    <p><strong>Email:</strong> {email}</p>
-                    <p><strong>Phone Number:</strong> 704-633-5244 ext. {extension}</p>
-                    <div>
+                        <h1 className="fz-50">{name}</h1>
+                        <p><strong>Email:</strong> {email}</p>
+                        <p><strong>Phone Number:</strong> 704-633-5244 ext. {extension}</p>
+                    <div className="mt-30">
                         <h2 className="fz-30">Practice Areas</h2>
                         <ul>
                         {practiceSection && practiceSection.map((area, index) => (<li key={index}>{area}</li>))}
