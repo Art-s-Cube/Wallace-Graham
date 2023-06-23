@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "components/Navbar/navbar";
-import Services from "components/Services/services";
 import CallToAction from "components/Call-to-action/call-to-action";
 import Footer from "components/Footer/footer";
-import AboutIntro from "components/About-intro";
+import AboutUs6 from "components/About-gives";
+import MinimalArea from "components/Minimal-Area/minimal-area";
 import LightTheme from 'layouts/Light'
 
 const About = () => {
@@ -31,20 +31,8 @@ const About = () => {
   return (
     <LightTheme>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
-        <section className={`page-header`}>
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-7 col-md-9">
-                <div className="cont text-center">
-                  <h1 className="mb-10">About Us</h1>
-                  <p></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      <AboutIntro />
-      <Services style="3item" />
+      <AboutUs6 />
+      <MinimalArea />
       <CallToAction />
       <Footer />
     </LightTheme>
@@ -54,7 +42,7 @@ const About = () => {
 export const Head = () => {
   return (
     <>
-      <title>Wallace & Graham Gives</title>
+      <title>W&G Gives</title>
     </>
   )
 }
