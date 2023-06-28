@@ -17,7 +17,7 @@ const Navbar = ({ lr, nr, theme }) => {
     <nav
       ref={nr}
       className={`navbar navbar-expand-lg change ${
-        theme === "themeL" ? "light" : ""
+        theme === "themeL" ? "dark" : ""
       }`}
     >
       <div className="container">

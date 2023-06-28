@@ -8830,6 +8830,7 @@ footer .item .copy-right p a {
 }
 
 @media screen and (max-width: 480px) {
+  
   .hamenu .cont-info {
     display: none;
   }
