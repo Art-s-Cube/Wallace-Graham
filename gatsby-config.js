@@ -28,6 +28,14 @@ module.exports = {
     },
   },
   {
+    resolve: "gatsby-plugin-hubspot",
+    options: {
+      trackingCode: "6171170",
+      respectDNT: true,
+      productionOnly: true,
+    },
+  },
+  {
     resolve: `gatsby-plugin-preload-fonts`,
     options: {
       crossOrigin: `use-credentials`,
