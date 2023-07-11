@@ -3,7 +3,7 @@ import Navbar from "components/Navbar/navbar";
 import Footer from "components/Footer/footer";
 import ContactHeader from "components/Contact-header/contact-header";
 import ContactForm1 from "components/Contact-form/contact-form1";
-import DarkTheme from "layouts/Dark";
+import LightTheme from "layouts/Light";
 
 const Contact = () => {
   const navbarRef = React.useRef(null);
@@ -34,28 +34,27 @@ const Contact = () => {
   }, [navbarRef]);
 
   return (
-    <DarkTheme>
+    <LightTheme>
       <Navbar nr={navbarRef} lr={logoRef} />
       <ContactHeader />
       <div className="main-content">
         <ContactForm1 />
         <div className="map" id="ieatmaps">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6010.126439563913!2d-100.75478744312291!3d41.13314584948978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2z2KfZhNmI2YTYp9mK2KfYqiDYp9mE2YXYqtit2K_YqQ!5e0!3m2!1sar!2seg!4v1644259110384!5m2!1sar!2seg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2092.984640643201!2d-80.46318704964443!3d35.67080833691029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8853f2d76aed7e21%3A0x54ed455f2526e231!2sWallace%20%26%20Graham%2C%20P.A.!5e0!3m2!1sen!2sus!4v1689095209568!5m2!1sen!2sus"
             loading="lazy"
           ></iframe>
         </div>
-
         <Footer hideBGCOLOR />
       </div>
-    </DarkTheme>
+    </LightTheme>
   );
 };
 
 export const Head = () => {
   return (
     <>
-      <title>Vie - Contact Dark</title>
+      <title>Vie - Contact Light</title>
     </>
   )
 }

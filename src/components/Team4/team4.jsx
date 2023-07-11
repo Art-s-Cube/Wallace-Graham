@@ -51,7 +51,6 @@ const Team4 = () => {
                   <div className="item cir">
                     <div className="img attorneyListImg">
                       <img src={attorney.image.resize.src} alt={attorney.name} width="360" height="392" />
-                      {/* ... rest of the code */}
                       <div className="info">
                         <h6>{attorney.name}</h6>
                         <p className="text-extra-light-gray">{attorney.email}</p>

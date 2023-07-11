@@ -38,10 +38,7 @@ module.exports = {
   {
     resolve: `gatsby-plugin-preload-fonts`,
     options: {
-      crossOrigin: `use-credentials`,
-      // OR
-      crossOrigin: pathname =>
-        pathname.match(/^\/elevated/) ? `use-credentials` : `anonymous`,
+      crossOrigin: `use-credentials`
     },
   },
   {

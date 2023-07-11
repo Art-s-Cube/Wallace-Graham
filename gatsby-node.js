@@ -1,3 +1,13 @@
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  if (stage.startsWith('develop') || stage.startsWith('build')) {
+    actions.setWebpackConfig({
+      plugins: [new NodePolyfillPlugin()]
+    });
+  }
+};
+
 const path = require("path");
 
 exports.createPages = async ({ graphql, actions }) => {

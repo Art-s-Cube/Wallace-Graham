@@ -1,20 +1,13 @@
-import React, { useCallback, useEffect } from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import particlesConfig from "config/particle-config";
-import particlesBlackConfig from "config/pr-s-black";
+import React, { useEffect } from "react";
 import ContentHeaderDate from "data/sections/contact-header.json";
 
-const ContactHeader = ({ sliderRef, blackStar }) => {
+const ContactHeader = ({ sliderRef }) => {
   useEffect(() => {
     setTimeout(() => {
       document.querySelector('#particles-js canvas')?.style.removeProperty('position');
     }, 0);
   }, []);
 
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
-  }, []);
 
   return (
     <header
@@ -36,11 +29,7 @@ const ContactHeader = ({ sliderRef, blackStar }) => {
           </div>
         </div>
       </div>
-      <Particles
-        id="particles-js"
-        init={particlesInit}
-        options={blackStar ? particlesBlackConfig : particlesConfig}
-      />
+      
       <div className="circle-color">
         <div className="gradient-circle"></div>
         <div className="gradient-circle two"></div>
