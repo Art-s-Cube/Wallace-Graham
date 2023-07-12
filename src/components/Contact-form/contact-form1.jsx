@@ -23,6 +23,7 @@ const ContactForm = () => {
     try {
       const apiResponse = await hubspotClient.crm.contacts.basicApi.create(SimplePublicObjectInput);
       console.log(JSON.stringify(apiResponse.body, null, 2));
+      setSubmitted(true);
     } catch (e) {
       e.message === 'HTTP request failed'
         ? console.error(JSON.stringify(e.response, null, 2))
