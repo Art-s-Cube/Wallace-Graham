@@ -17,13 +17,12 @@ const ContactForm = () => {
     "email": email
   };
   const SimplePublicObjectInput = { properties };
-  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const apiResponse = await hubspotClient.crm.contacts.basicApi.create(SimplePublicObjectInput);
       console.log(JSON.stringify(apiResponse.body, null, 2));
-      setSubmitted(true);
     } catch (e) {
       e.message === 'HTTP request failed'
         ? console.error(JSON.stringify(e.response, null, 2))
@@ -38,8 +37,7 @@ const ContactForm = () => {
           <div className="col-lg-6">
             <div className="form md-mb50">
               <h4 className="fw-700 mb-50">Get In Touch.</h4>
-              {!submitted ? (
-              <form method="post" onSubmit={handleSubmit} action="https://forms.hubspot.com/uploads/form/v2/6171170/dab5a857-6623-4f10-a9d4-f35bccdcd070" id="hs-form-dab5a857-6623-4f10-a9d4-f35bccdcd070-a9375e18-1ce7-41c6-bcd7-a371e0add1db" className="contactForm mailchimp-one__mc-form mc-form" data-instance-id="a9375e18-1ce7-41c6-bcd7-a371e0add1db" data-form-id="dab5a857-6623-4f10-a9d4-f35bccdcd070" data-portal-id="6171170" lang="en" data-hs-cf-bound="true">
+              <form method="post" action="https://forms.hubspot.com/uploads/form/v2/6171170/dab5a857-6623-4f10-a9d4-f35bccdcd070" id="hs-form-dab5a857-6623-4f10-a9d4-f35bccdcd070-a9375e18-1ce7-41c6-bcd7-a371e0add1db" className="contactForm mailchimp-one__mc-form mc-form" data-instance-id="a9375e18-1ce7-41c6-bcd7-a371e0add1db" data-form-id="dab5a857-6623-4f10-a9d4-f35bccdcd070" data-portal-id="6171170" lang="en" data-hs-cf-bound="true">
                 <div className="hs-form__field hs-form__field-firstname hs-firstname">
                   <input id="firstname-input" className="formInput" type="text" placeholder='First Name' name="firstname" required="" autoComplete="given-name" inputMode="text" aria-invalid="false" aria-labelledby="firstname-label" aria-describedby="firstname-description" aria-required="true" value={firstname} onChange={e => setFirstname(e.target.value)}/>
                 </div>
@@ -72,14 +70,9 @@ const ContactForm = () => {
                   </select>
                 </div>
                 <div className="hs-form__actions">
-                  <button type="submit" name="Submit" className="hs-button hs-form__actions__submit butn bord">Submit</button>
+                  <button type="submit" name="Submit" className="hs-form__actions__submit butn bord">Submit</button>
                 </div>
               </form>
-              ) : (
-                <div className="thank-you-message">
-                  Thank you for your submission!
-                </div>
-              )}
             </div>
           </div>
           <div className="col-lg-5 offset-lg-1">
