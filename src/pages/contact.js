@@ -54,7 +54,7 @@ const Contact = () => {
 export const Head = () => {
   return (
     <>
-      <title>Vie - Contact Light</title>
+      <title>Contact Us for Expert Legal Representation | Wallace & Graham</title>
     </>
   )
 }

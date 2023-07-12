@@ -119,7 +119,7 @@ const Navbar = ({ lr, nr, theme }) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={`/contact/contact-dark`} className="nav-link">
+              <Link to={`/contact/`} className="nav-link">
                 Contact
               </Link>
             </li>
