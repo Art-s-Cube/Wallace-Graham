@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Client } from "@hubspot/api-client";
-const hubspotClient = new Client({ accessToken: 'pat-na1-3fd5ddba-67b6-45b1-9d3b-7fdb6da028b5' });
+const hubspotClient = new Client({ accessToken: '' });
 
 const ContactForm = () => {
   const [firstname, setFirstname] = useState('');
